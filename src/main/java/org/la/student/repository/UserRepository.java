@@ -1,4 +1,4 @@
-package org.la.student;
+package org.la.student.repository;
 
 import org.la.student.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

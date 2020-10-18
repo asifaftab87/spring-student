@@ -2,8 +2,8 @@ package org.la.student.rest.controller;
 
 import java.util.List;
 
-import org.la.student.CreditCardService;
 import org.la.student.model.CreditCard;
+import org.la.student.service.CreditCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

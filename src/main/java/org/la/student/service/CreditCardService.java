@@ -1,9 +1,10 @@
-package org.la.student;
+package org.la.student.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.la.student.model.CreditCard;
+import org.la.student.repository.CreditCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,12 +31,8 @@ public class CreditCardService {
 	public CreditCard add(CreditCard creditCard) {
 		return creditcardRepository.save(creditCard);
 	}
-	
-//	public void deleteByCc_Id(Long creditcardcc_Id){
-//		 creditcardRepository.deleteById(creditcardcc_Id);
-//	
-//			}
-	}
+
+}
 
 
 

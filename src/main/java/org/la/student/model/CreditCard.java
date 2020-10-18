@@ -20,50 +20,53 @@ public class CreditCard implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long cc_id;
+	@Column(name="cc_id")
+	private long id;
 	
 	@Column(name="cc_num")
-	private String cc_num;
+	private String ccNum;
 	
 	@Column(name="holder_name")
-	private String holder_name;
+	private String holderName;
 	
 	@JsonFormat(pattern="yyyy-MM-dd")
-	private Date expiry_date;
+	private Date expiryDate;
 	
 	public CreditCard() {}
 
-	public long getCc_id() {
-		return cc_id;
+	public long getId() {
+		return id;
 	}
 
-	public void setCc_id(long cc_id) {
-		this.cc_id = cc_id;
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public String getCc_num() {
-		return cc_num;
+	public String getCcNum() {
+		return ccNum;
 	}
 
-	public void setCc_num(String cc_num) {
-		this.cc_num = cc_num;
+	public void setCcNum(String ccNum) {
+		this.ccNum = ccNum;
 	}
 
-	public String getHolder_name() {
-		return holder_name;
+	public String getHolderName() {
+		return holderName;
 	}
 
-	public void setHolder_name(String holder_name) {
-		this.holder_name = holder_name;
+	public void setHolderName(String holderName) {
+		this.holderName = holderName;
 	}
 
-	public Date getExpiry_date() {
-		return expiry_date;
+	public Date getExpiryDate() {
+		return expiryDate;
 	}
 
-	public void setExpiry_date(Date expiry_date) {
-		this.expiry_date = expiry_date;
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
 	}
+
+	
 	
 }
 

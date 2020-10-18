@@ -2,8 +2,8 @@ package org.la.student.rest.controller;
 
 import java.util.List;
 
-import org.la.student.UserService;
 import org.la.student.model.User;
+import org.la.student.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
