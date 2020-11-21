@@ -8,13 +8,7 @@ public class check_output {
 		int b= ++a;
 		
 		System.out.println(a);
-		System.out.println(b);
-		
-		
-		
-		
-		
-		
+		System.out.println(b);	
 		
 	}
 
