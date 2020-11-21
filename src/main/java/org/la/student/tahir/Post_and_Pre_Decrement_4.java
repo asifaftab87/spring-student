@@ -1,20 +1,15 @@
 package org.la.student.tahir;
 
-public class Typecasting {
+public class Post_and_Pre_Decrement_4 {
 
 	public static void main(String[] args) {
-		char c = 'a';
-		int i = c;
-		System.out.println(i);
+		
 
-		
-		
-	
-	
-		
-		
-		
-		
+		int i = 5;
+		int j = --i*2;
+		System.out.println(i);
+		System.out.println(j);
+
 	}
 
 }

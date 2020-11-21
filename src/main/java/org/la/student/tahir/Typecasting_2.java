@@ -1,20 +1,11 @@
 package org.la.student.tahir;
 
-public class check_output {
+public class Typecasting_2 {
 
 	public static void main(String[] args) {
-	
-		int a=3;
-		int b= ++a;
 		
+		int a = 19/5;
 		System.out.println(a);
-		System.out.println(b);
-		
-		
-		
-		
-		
-		
 		
 	}
 
