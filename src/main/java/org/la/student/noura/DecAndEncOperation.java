@@ -14,10 +14,6 @@ public class DecAndEncOperation {
 		System.out.println("g="+g);
 		
 		
-		int x = 3;
-		int t = x++ / 3;
-		System.out.println("x="+x);
-		System.out.println("t="+t);
 	}
 
 }
