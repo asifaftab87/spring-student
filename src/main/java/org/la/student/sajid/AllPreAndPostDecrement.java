@@ -29,11 +29,8 @@ public class AllPreAndPostDecrement {
 		h=g--*6;
 		System.out.println("Post Decrement Multiply");
 		System.out.println(g+","+h);
-				
 		
-
-
-
+		
 	}
 
 }
