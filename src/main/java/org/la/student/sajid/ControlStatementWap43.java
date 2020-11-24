@@ -8,7 +8,6 @@ public class ControlStatementWap43 {
 			a=(a<999 && a>=100)?a:b;
 		    System.out.println("A= "+a);
 		    }
-		
 	    if(b>99 && b<=999) 
 		{
 	    	b=(b<999 && b>=100)?b:a;
