@@ -3,8 +3,8 @@ package org.la.student.ameen;
 public class CheckNum {
 
 	public static void main(String[] args) {
-		// . wap to check whether a given number is positive and double digit or single digit number 
-		int num =  5 ;
+		//  wap to check whether a given number is positive and double digit or single digit number 
+		int num =  25 ;
 		if(num >= 0)
 		{
 			System.out.println("number is Positive");
