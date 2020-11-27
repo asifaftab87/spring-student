@@ -4,12 +4,12 @@ public class IfStatment {
 
 	public static void main(String[] args) {
 
-		int a= 6;
+		int a= 9;
 		 if (a%2==0) {
 			 System.out.println("this number is even");
 		 }
 		 
-		 if (a%2==1) {
+		 else {
 			 
              System.out.println("this number is odd");
 
