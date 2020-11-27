@@ -8,7 +8,12 @@ public class IfStatment {
 		 if (a%2==0) {
 			 System.out.println("this number is even");
 		 }
-              System.out.println("this number is odd");
+		 
+		 if (a%2==1) {
+			 
+             System.out.println("this number is odd");
+
+		 }
 		
 	}
 
