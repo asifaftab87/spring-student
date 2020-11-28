@@ -16,7 +16,6 @@ public class ControleStatement053 {
 			System.out.println("Double digits");
 		if(b>0)
 		    System.out.println("Positive");
-		
 			
 
 	}

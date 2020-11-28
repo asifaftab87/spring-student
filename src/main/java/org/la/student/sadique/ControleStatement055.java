@@ -9,7 +9,6 @@ public class ControleStatement055 {
 			System.out.println("Upper Case");
 		else if(c>'a' && c<'z')
 			System.out.println("Lower Case");
-		
 
 	}
 

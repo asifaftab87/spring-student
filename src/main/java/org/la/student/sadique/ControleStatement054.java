@@ -11,7 +11,6 @@ public class ControleStatement054 {
 			System.out.println("teenage");
 		else if(age>18)
 			System.out.println("adult");
-		
 
 	}
 

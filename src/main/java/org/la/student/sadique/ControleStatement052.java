@@ -12,7 +12,6 @@ public class ControleStatement052 {
 			System.out.println("invalid");
 		
 		
-		
 
 	}
 
