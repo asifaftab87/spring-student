@@ -10,6 +10,7 @@ public class ControleStatement056 {
 		else
 			if(a>='A' && a<='Z')
 			System.out.println(a+"=capital");
+		
 
 	}
 

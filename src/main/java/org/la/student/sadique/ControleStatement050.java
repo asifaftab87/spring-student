@@ -9,6 +9,7 @@ public class ControleStatement050 {
 			System.out.println("UP");
 		else 
 			System.out.println("Invalid");
+		
 
 	}
 
