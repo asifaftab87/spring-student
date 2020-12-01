@@ -5,7 +5,7 @@ public class FindEven {
 	public static void main(String[] args) {
 		//wap to print all even numbers between 100 to 120.
 		int i = 100;
-		while(i<=200)
+		while(i<=120)
 		{
 			if(i % 2 == 0)
 			{
