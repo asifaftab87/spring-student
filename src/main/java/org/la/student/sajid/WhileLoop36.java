@@ -12,5 +12,6 @@ public class WhileLoop36 {
 		d++;
 		}
 	}
+	
 
 }

@@ -9,5 +9,6 @@ public class Whileloop33 {
 			System.out.print(" "+b);
 		b++;}
 	}
+	
 
 }

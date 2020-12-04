@@ -10,5 +10,6 @@ public class WhileLoop07 {
 			System.out.println("");
 		}
 	}
+	
 
 }

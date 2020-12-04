@@ -9,5 +9,6 @@ public class WhileLoop32 {
 			System.out.print(a);
 		a++;}
 	}
+	
 
 }

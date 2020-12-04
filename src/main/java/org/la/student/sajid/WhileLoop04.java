@@ -17,6 +17,7 @@ public class WhileLoop04 {
 	}else if(b>a) {
 		System.out.println("B is positive number");
 	}
+	
 	}
 
 }

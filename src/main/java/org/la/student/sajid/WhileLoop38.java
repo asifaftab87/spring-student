@@ -12,6 +12,7 @@ public class WhileLoop38 {
 				System.out.print(" "+a);
 			}
 		a++;}
+		
 	
 	}
 
