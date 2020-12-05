@@ -5,10 +5,10 @@ public class Control_Statement_42 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
  //47. wap to find least number among two numbers
-		int a=3;
+		int a=9;
 		int b=6;
 		
-		if(a<b && a<b) {
+		if(a<b) {
 			System.out.println(a+ " Least");
 		}
 		else {

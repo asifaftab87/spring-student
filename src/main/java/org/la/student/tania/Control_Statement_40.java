@@ -7,7 +7,7 @@ public class Control_Statement_40 {
 		//45. wap to find greatest number among two numbers
 		int a=3;
 		int b=6;
-		if(a>b && a<b) {
+		if(a>b) {
 			System.out.println(a+ " greatest");
 		}
 		else {
