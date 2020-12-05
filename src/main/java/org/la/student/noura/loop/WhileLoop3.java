@@ -13,6 +13,14 @@ public class WhileLoop3 {
 			System.out.println(alpha);
 			alpha++;
 		}
+		
+	//or 
+		
+		int b=97;
+		char c=(char)b;
+		while(c>=97 && c<=122) {
+			System.out.print(c);
+		c++;}
 	}
 
 }
