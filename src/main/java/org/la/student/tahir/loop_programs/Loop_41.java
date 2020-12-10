@@ -3,7 +3,16 @@ package org.la.student.tahir.loop_programs;
 public class Loop_41 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// wap to print alllower case alphabets except vowels.
+		
+				char a ='a';
+				
+				while (a<='z') {
+					
+					if(!(a=='a'||a== 'e' ||a== 'i' ||a=='o' || a=='u'))
+						System.out.println(a);
+					a++;
+				}
 
 	}
 
