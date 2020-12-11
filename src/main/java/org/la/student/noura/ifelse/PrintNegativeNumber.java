@@ -32,7 +32,7 @@ public class PrintNegativeNumber {
 		//without if
 		
 		
-		int x=-9 , z=1;
+		int x=-9 , z=-1;
 		int negativeNum = (x<0)? x : ((z<0) ? z : 0) ;
 		System.out.println(negativeNum);
 		
