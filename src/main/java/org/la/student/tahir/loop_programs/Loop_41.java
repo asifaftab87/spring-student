@@ -3,7 +3,7 @@ package org.la.student.tahir.loop_programs;
 public class Loop_41 {
 
 	public static void main(String[] args) {
-		// wap to print alllower case alphabets except vowels.
+		// wap to print all lower case alphabets except vowels.
 		
 				char a ='a';
 				
