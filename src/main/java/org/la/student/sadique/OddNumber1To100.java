@@ -1,5 +1,6 @@
 package org.la.student.sadique;
 
+
 public class OddNumber1To100 {
 
 	public static void main(String[] args) {
