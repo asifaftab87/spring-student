@@ -10,7 +10,7 @@ public class DecreaseStarRight {
 			
 			for(int s=1 ; s<=i ; s++) {
 				System.out.print(" ");
-			}
+			} 
 			
 			for(int k=1 ; k<=n-i ; k++) {
 				System.out.print("* ");
