@@ -7,7 +7,7 @@ public class SumofPrimeNumber {
 		int n =10;
         int sum = 0;
 
-        for(int num = 2; num <= n; num++) {
+        for(int num = 1; num <= n; num++) {
 
             int i;
 
@@ -22,7 +22,7 @@ public class SumofPrimeNumber {
 
             
             if(i != num) {
-            	System.out.print(" ," +num);
+            	System.out.print(num + ",");
                 sum += num;            
             }
         }
