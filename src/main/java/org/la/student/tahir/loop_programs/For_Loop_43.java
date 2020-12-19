@@ -3,7 +3,7 @@ package org.la.student.tahir.loop_programs;
 public class For_Loop_43 {
 
 	public static void main(String[] args) {
-		// sum of all natural number from 1 to n
+		//Wap to calculate sum of digits of a number.
 		int i=28917346;
 		
 		int s = 0;
