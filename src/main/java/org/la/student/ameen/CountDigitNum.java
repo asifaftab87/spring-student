@@ -4,7 +4,7 @@ public class CountDigitNum {
 
 	public static void main(String[] args) {
 		// count number of digit in a number
-		int num = 12345;
+		int num = 1234;
 		int count =0;
 		while(num!=0) 
 		{
