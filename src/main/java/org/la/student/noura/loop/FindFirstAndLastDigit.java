@@ -15,9 +15,16 @@ public class FindFirstAndLastDigit {
         System.out.println("Last digit: "+lastDigit);
  
         while(num!=0) {
-            firstDigit = num%10;
+        	int s=0;
+        	int r=num%10;
+        	s=s*10+r;
             num /= 10;
+            firstDigit=s%10;
         }
         System.out.println("First digit: "+firstDigit);
 	}
+	
+	
+	
+	
 }

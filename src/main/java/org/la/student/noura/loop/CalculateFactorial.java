@@ -7,7 +7,7 @@ public class CalculateFactorial {
 		//Wap to calculate factorial of a number
 		//while
 		
-		int num =7;
+		int num =5;
 		int f=1;
 		while(num>=1)
 		{
@@ -15,7 +15,5 @@ public class CalculateFactorial {
 			num--;
 		}
 		System.out.println("factorial =  "+f);
-		
 	}
-
 }

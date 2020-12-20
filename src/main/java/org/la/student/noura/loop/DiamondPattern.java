@@ -14,12 +14,19 @@ public class DiamondPattern {
                 System.out.print(" ");
             }
             s--;
+            
+            
             for (int i = 1; i <= 2 * j - 1; i++) 
             {
                 System.out.print("*");                
             }
             System.out.println("");
         }
+        
+        
+        
+        
+        
         s = 1;
         for (int j = 1; j <= n - 1; j++) 
         {
