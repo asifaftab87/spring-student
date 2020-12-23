@@ -1,11 +1,14 @@
 package org.la.student.tahir.loop_programs;
 
-public class For_Loop_61 {
+public class For_Loop_62 {
 
 	public static void main(String[] args) {
-		//Wap to check whether a number is Armstrong number or not.
+		//Wap to print all Armstrong numbers between 1 to n.
 		
-		int n =371;
+		int z=400;
+		for(int i=1; i<=z; i++)
+		
+		{int n =i;
 		int a, c=0;
 		int b=n;
 		
@@ -16,13 +19,10 @@ public class For_Loop_61 {
 			
 			c= c+(a*a*a);
 			
+			if(b==c)
+				System.out.println(c+ " is Amstrong");
 		}
 		
-		if(b==c)
-		System.out.println("Amstrong");
-		
-		else
-			System.out.println("Not amstrong");
 	}
-}
+}}
 
