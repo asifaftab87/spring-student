@@ -2,6 +2,8 @@ package org.la.student.sajid;
 
 public class Array11 {
 	public static void main(String[] args) {
+//		11) wap to copy one array into other array
+		
 		int a[]= {1,2,3,4,5};
 		int []c=a;
 		System.out.println("Orignal Array Number");

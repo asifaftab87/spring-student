@@ -1,4 +1,4 @@
-package org.la.student.sajid;
+ package org.la.student.sajid;
 
 public class FindSumOfFIrstAndLastDigitOfNumber {
 	public static void main(String[] args) {
