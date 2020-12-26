@@ -2,18 +2,10 @@ package org.la.student.sajid;
 
 public class Roughly {
 	public static void main(String[] args) {
-		
-		int c=5;
-		for(int a=0;a<=c;a++) {
-			
-			for(int b=1;b<=a;b++) {
-				System.out.print(" ");
-			}
-			
-			for(int d=1;d<=c-a;d++) {
-			System.out.print("*");
-			}
-			System.out.println("");
-		} 
+		int a[]= {1,2,3,4,5,6};
+//		int b[]=new int[a.length];
+		for(int c=0;c<a.length;c++) {
+		System.out.print(a[c]+" ");
+		}
 	}
 }

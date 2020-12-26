@@ -8,9 +8,9 @@ public class FirstLoop {
 		
 		for(int i=0 ; i<a.length ; i++) {
 			a[i] = 10 * i;
-		}
 		
-		for(int i=0 ; i<a.length ; i++) {
+		
+		//for(int i=0 ; i<a.length ; i++) {
 			System.out.println("a["+i+"] = "+a[i]);
 		}		
 		
