@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class Copytwoarraysintoonearray {
 
 	public static void main(String[] args) {
-		// Copy two arrays into one array
+		// wap to add two array elements n copy into third array
 		
 		int[] a = {6,4,566,4};
 		int[] b = { 8, 9,4, 3};
@@ -13,12 +13,13 @@ public class Copytwoarraysintoonearray {
 		
 		int[] c = new int[arr1 + arr2];
 		
-        System.arraycopy(a, 0, c, 0, arr1);
-        System.arraycopy(b, 0, c, 0, arr2);
-
-        System.out.println(Arrays.toString(c));
-
-	
+		for(int i=0; i<a.length; i++) {
+			
+			c[i] = a[i] + b[i];
+			
+			System.out.println(c[i]);
+		}
+		
 		
 		
 		
