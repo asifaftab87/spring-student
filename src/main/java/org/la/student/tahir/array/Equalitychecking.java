@@ -6,7 +6,7 @@ public class Equalitychecking {
 		// wap to check whether two array are equal or not(means we have to check each element of two arrays)
 		
 		int[] a= {1,2,4,4};
-		int[] b= {1,2,3,4};
+		int[] b= {1,2,4,4};
 		
 		boolean result = true;
 		
@@ -36,7 +36,28 @@ public class Equalitychecking {
 				
 		}
 		
+/*boolean result =true;
+
+if ( a.length == b.length) {
 	
+	for(int i=0; i<a.length; i++) {
+		
+		if(a[i] != b[i]) {
+			
+			result =false;
+		}
+	}
+}
+
+else 
+	result =false;
+
+if(result == true)
+	sout ....equal
+	
+	else
+		sout ...false
+	*/
 
 
 

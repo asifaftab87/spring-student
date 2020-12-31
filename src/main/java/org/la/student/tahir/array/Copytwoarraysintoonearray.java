@@ -1,5 +1,5 @@
 package org.la.student.tahir.array;
-import java.util.Arrays;
+
 
 public class Copytwoarraysintoonearray {
 
@@ -12,12 +12,25 @@ public class Copytwoarraysintoonearray {
 		int arr2= b.length;
 		
 		int[] c = new int[arr1 + arr2];
+		int i=0;
+		for(; i<a.length; i++) {
+			
+			c[i] = a[i] ;
+			
+		//System.out.println(c[i]);
+		}
 		
-		for(int i=0; i<a.length; i++) {
+		for(int j=1; j<b.length; j++) {
 			
-			c[i] = a[i] + b[i];
+			c[i]= b[j];
 			
-			System.out.println(c[i]);
+		//	System.out.println(c[i]);
+			i++;
+		}
+		
+		for(int x=0; x<c.length-1; x++) {
+		
+			System.out.println(c[x]);
 		}
 		
 		
