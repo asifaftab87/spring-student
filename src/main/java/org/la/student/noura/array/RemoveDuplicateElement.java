@@ -1,11 +1,14 @@
 package org.la.student.noura.array;
 
+
 public class RemoveDuplicateElement {
 
 	public static void main(String[] args) {
 		//Write a java program to remove duplicate elements from an array
 		
-		int arr[]= {1,1,2,2,4,3,5,6,6};
+	
+		       
+int arr[]= {1,1,2,2,4,3,5,6,6};
 		
 		int len=arr.length;
 		int j=0;
@@ -26,5 +29,6 @@ public class RemoveDuplicateElement {
 		
 	}	
 
+	
 
 }
