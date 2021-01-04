@@ -7,7 +7,6 @@ public class AddThreeNumber {
 		int d = 17;
 		int e = b+c+d;
 		System.out.println(e);
-		System.out.println(e);
 				
 		
 	}}
