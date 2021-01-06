@@ -1,6 +1,8 @@
 package org.la.student.aqsa;
-import java.util.*;
-public class Greatest {
+
+import java.util.Scanner;
+
+public class Smallest {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		int[] a= new int[10];
@@ -8,16 +10,16 @@ public class Greatest {
 			a[i]=sc.nextInt();
 			}
 		sc.close();
-		System.out.print(greatestElement(a));
+		System.out.print(smallestElement(a));
 		}
-		static int greatestElement(int[] a) {
-			int greatest=a[0];
+		static int smallestElement(int[] a) {
+			int smallest=a[0];
 			for(int i=1;i<a.length;i++) {
-				if(greatest<a[i]) {
-					greatest=a[i];
+				if(smallest>a[i]) {
+					smallest=a[i];
 				}
 			}
-			return greatest;
+			return smallest;
 		}
 
 }
