@@ -10,7 +10,7 @@ public class For_Loop_Pattern_Printing_1 {
 			for(int k=1; k<=i; k++) {
 				System.out.print("*");
 			}
-			System.out.println("");
+			System.out.println("h");
 			
 		}
 
