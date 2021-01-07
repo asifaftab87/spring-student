@@ -5,7 +5,7 @@ public class RemoveSpecificElement {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int a[]= {1,2,4,5,6,7,8};
+		int a[]= {1,2,4,5,3,6,7,8};
 		
 	    int	toDelete=3;
 	

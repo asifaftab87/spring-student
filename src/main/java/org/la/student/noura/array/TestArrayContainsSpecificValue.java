@@ -12,8 +12,9 @@ public class TestArrayContainsSpecificValue {
 			System.out.print(" "+a[i]);
 			if (a[i]==specificValue) {
 				System.out.println();
-				System.out.println("YES");
+				System.out.println("YES it contains ");
 			}
+			
 		}
 	}
 }
