@@ -4,7 +4,7 @@ public class Checksomepropertiesofagivennumber {
 
 	public static void main(String[] args) {
 		
-		int x =250;
+		int x =25;
 		
 		arg(x);
 		cha(x);
