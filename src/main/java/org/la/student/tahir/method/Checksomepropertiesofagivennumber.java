@@ -4,12 +4,14 @@ public class Checksomepropertiesofagivennumber {
 
 	public static void main(String[] args) {
 		
-		int x =5;
+		int x =250;
 		
 		arg(x);
 		cha(x);
 		prime(x);
 		fact(x);
+		Divisibility(x);
+		Multipleof10(x);
 	}
 	
 	
@@ -57,5 +59,22 @@ static void fact( int a)  {
 		System.out.println("Factorial of " +a + " is: " + fact);
 	}
 	
-
+static void Divisibility( int a)  {
+	int b =5;
+	if (a%b==0) {
+		System.out.println(a+" is divisble by " + b);
+	}
+	else
+		System.out.println(a+" is not divisible by " + b);
 }
+
+static void Multipleof10( int a)  {
+	
+	if (a%10==0) {
+		System.out.println(a+" is a multiple of 10 " );
+	}
+	else
+		System.out.println(a+" is not a multiple of 10 ");
+}}
+
+
