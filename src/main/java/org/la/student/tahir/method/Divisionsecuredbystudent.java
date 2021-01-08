@@ -1,7 +1,8 @@
 package org.la.student.tahir.method;
 
 public class Divisionsecuredbystudent {
-	//Accept an argument
+	//wap to find divistion secured by a student
+	
 	public static void main(String[] args) {
 		
 		int x =67;

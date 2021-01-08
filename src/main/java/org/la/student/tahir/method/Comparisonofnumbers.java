@@ -8,16 +8,18 @@ public class Comparisonofnumbers {
 		
 		System.out.println("Numbers are : "+x+" "+" "+y+" "+" "+z);
 		
-		greatest(x,y,z);
+		greatestof3(x,y,z);
 		Smallestof3 (x,y,z);
 		Smallestof2 (x,y);
+		greatestof2 (z,y);
 	
 	
 		
 	}
 	
 	
-	static void greatest (int a, int b, int c) {
+	static void greatestof3 (int a, int b, int c) {
+	//	wap to find to find greatest among three numbers
 		
 		System.out.println("Between 3 numbers");
 		if (a>b && a>b) {
@@ -36,6 +38,7 @@ public class Comparisonofnumbers {
 	
 	
 	static void Smallestof3 (int a, int b, int c) {
+		
 		System.out.println("Between 3 numbers");
 		
 		if (a<b && a<b) {
@@ -63,9 +66,22 @@ public class Comparisonofnumbers {
 		else  {
 			System.out.println(b+ " is smallest");
 		}
-		
-		
-		
 	}
+	
+static void greatestof2 (int a, int b) {
+		
+		System.out.println("Between first 2 numbers");
+		
+		if (a>b ) {
+			System.out.println(a+" is greatest");
+		}
+		
+		else  {
+			System.out.println(b+ " is greatest");
+		}
+	}
+	
+	
+
 	
 }
