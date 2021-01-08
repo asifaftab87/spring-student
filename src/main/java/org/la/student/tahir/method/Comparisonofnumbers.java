@@ -70,7 +70,7 @@ public class Comparisonofnumbers {
 	
 static void greatestof2 (int a, int b) {
 		
-		System.out.println("Between first 2 numbers");
+		System.out.println("Between last 2 numbers");
 		
 		if (a>b ) {
 			System.out.println(a+" is greatest");
