@@ -6,14 +6,14 @@ public class Swappingnumber {
 		
 		int x =24;
 		
-		arg(x);
+		System.out.println(arg(x));
 	
 		
 		
 	}
 	
 	
-	static void arg (int a) {
+	static int arg (int a) {
 		
 		int z=0;
 		while(a>0) {
@@ -24,9 +24,11 @@ public class Swappingnumber {
 		}
 		
 		
-		System.out.println(z);
+		//System.out.println(z);
+		return z;
 		
 	}
+	
 	
 
 }
