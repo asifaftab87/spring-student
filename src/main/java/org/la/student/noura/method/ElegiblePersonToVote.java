@@ -16,7 +16,7 @@ public class ElegiblePersonToVote {
 	}
 
 	static void vote(int a) {
-				if (a>=18) {System.out.println("your voice was taken");}
+				if (a>=16) {System.out.println("your voice was taken");}
 
 		else System.out.println("you are not allowed to vote");
 	}
