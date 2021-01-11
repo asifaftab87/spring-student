@@ -11,8 +11,8 @@ public class PrintSumofTwoNumbers {
 		
 		num1=sc.nextInt();
 		num2=sc.nextInt();
-		
-        System.out.println("sum of two numbers :"+sum(num1,num2));
+		int c=sum(num1,num2);
+        System.out.println("sum of two numbers :"+c);
 	}
 
 	static int sum(int a ,int b) {
