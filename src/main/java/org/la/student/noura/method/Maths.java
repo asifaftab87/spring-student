@@ -6,7 +6,7 @@ public class Maths {
 
 		
 		int a =5, b=2;
-		
+		disp();
 		System.out.println("sum of two numbers; "+sum(a,b));
         sub(a,b);
         
