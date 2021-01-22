@@ -1,7 +1,7 @@
 package org.la.student.tahir.method;
 
 public class FactorialusingRecursion {
-	//Largest element in an array.
+	//Factorial 
 	public static void main(String[] args) {
 		
 		int fact;
