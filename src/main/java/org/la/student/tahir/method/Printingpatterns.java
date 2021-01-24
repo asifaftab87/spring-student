@@ -1,7 +1,7 @@
 package org.la.student.tahir.method;
 
 public class Printingpatterns {
-	// Returning value
+	// Pattern Printing
 	public static void main(String[] args) {
 		
 		int a=8;
@@ -11,6 +11,28 @@ public class Printingpatterns {
 	decreasedstar(a);
 	decreasedstarR(a);
 	}
+	
+	
+	/*
+	 for(int i=1; i<=x; i++){
+	 
+	  for(int k=1; k<=i; k++){
+	  
+	  system.out.print("*");
+	  }
+	  
+	    system.out.print (" ");
+	    
+	    }
+	  
+	 * */
+	
+	
+	
+	
+	
+	
+	
 	
 	static void increasedstar(int x ) {
 		
