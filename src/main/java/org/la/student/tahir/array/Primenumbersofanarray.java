@@ -7,14 +7,15 @@ public class Primenumbersofanarray {
 		
 		
 		
-		int[] array = new int [100];
+		int[] array = new int [10];
+		
 	    
-	    for(int i=0; i<100; i++)
+	   for(int i=0; i<array.length; i++)
 	    {
 	        array[i] = i+1;
 	    }
 	    //loop through the numbers one by one
-	    for(int i=0; i<array.length; i++){
+	    for(int i=0; i<array.length+1; i++){
 	        boolean isPrime = true;
 
 	        //check to see if the numbers are prime
@@ -34,6 +35,9 @@ public class Primenumbersofanarray {
 		
 		
 			}
+	
+	
+	
 			
 				
 		}

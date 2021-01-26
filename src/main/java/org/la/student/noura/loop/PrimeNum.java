@@ -5,7 +5,7 @@ public class PrimeNum {
 	public static void main(String[] args) {
 		
 
-		int n =4 , r= 2;
+		int n =34 , r= 2;
 		while (r<n) {
 			
 	        	if (n%r==0)
