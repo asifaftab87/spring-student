@@ -17,6 +17,7 @@ public class PrintallPrimeNumbersfromArray {
 		System.out.print(" prime numbers in array are: ");
 		
 		
+		////printing prime numbers
 		
 		for(int i=0;i<a.length;i++) {
 			int count =0;
