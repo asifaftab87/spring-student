@@ -19,7 +19,10 @@ public class MainClas {
 		m.largest(400, 90, 6);
 		m.smallest(400,90, 6);
 		
-		System.out.println(m.getsmallest());
+		System.out.println("integer : "+m.getinteger());
+		
+		System.out.println("Sum = " +m.addition(10, 20, 30));
+	
 	}
 
 }

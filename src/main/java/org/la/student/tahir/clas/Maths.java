@@ -32,8 +32,15 @@ public void  smallest(int a, int b, int c) {
 			System.out.println(c+ " is the smallest");
 	}
 
-public int getsmallest() {
+	public int getinteger() {
 	
 	return z; 
 }
+
+	public int addition (int a, int b, int c) {
+	
+		int sum =  a+b+c;
+		return sum;
 }
+}
+
