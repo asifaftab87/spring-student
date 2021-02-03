@@ -2,7 +2,7 @@ package org.la.student.sajid;
 
 public class FindGivenNumberPrimeOrNot {
 	public static void main(String[] args) {
-		int n=28;
+		int n=6;
 		System.out.println("Usnig for Loop");
 		for(int a=1;a<=n;a++) {
 			if(n%2==0) {

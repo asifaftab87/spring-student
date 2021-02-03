@@ -2,18 +2,21 @@ package org.la.student.sajid.method;
 
 public class PrimeMethod {
 	public static void main(String[] args) {
-		System.out.println("is number prime: "+prime(9 ));
+		System.out.println("is number prime: "+prime(8));
 	}
 	
 	static boolean prime(int num) {
-		int i=2;
-		while(i<num) {
+		int i=0,temp=0;
+		for(i=2;i<=num-1;i++) {
 			if(num%i==0) {
-				return false;
+				temp=temp+1;
 			}
-			i++;
 		}
-		return true;
+		if(temp>0) {
+			return false;
+		}else 
+			return true;
 	}
-
+	
 }
+
