@@ -8,7 +8,6 @@ public class OverLoadingMethod {
 		fun("Sajid");
 		fun(45.02);
 		
-		
 	}
 	static void fun() {
 		System.out.println("Check Fun Method");
@@ -30,6 +29,4 @@ public class OverLoadingMethod {
 		System.out.println("Check Fun Double "+d);
 	
 	}
-
-
 }
