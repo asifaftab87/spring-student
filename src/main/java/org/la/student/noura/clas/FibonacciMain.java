@@ -8,8 +8,11 @@ public class FibonacciMain {
 		
 		Fibonacci fb= new Fibonacci();
 		
-		fb.fib(3, 4);
-
+		fb.fib(1, 3);
+		
+		
+	
+	
 	}
 
 }
