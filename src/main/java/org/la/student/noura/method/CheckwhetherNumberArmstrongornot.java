@@ -16,14 +16,15 @@ public class CheckwhetherNumberArmstrongornot {
 		static void arms(int num) {
 		 
 		int number;
-		int temp;
+		int r;
 		int total=0;
 		number=num;
 		for(;number!=0;)
 		{
-			temp=number%10;
-			total=total+temp*temp*temp;
-			number=number+10;
+			r=number%10;//4
+			total=total+r*r*r;//0+64=64
+			number=number+10;//33
+			
 			
 		}
 		if(total==num)
