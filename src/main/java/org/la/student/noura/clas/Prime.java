@@ -5,7 +5,7 @@ public class Prime {
 	
 
  
- static void checkPrime(int n){  
+ public static void checkPrime(int n){  //setter
 	  int i;
 	  int r=0;
 	  int flag=0;      
