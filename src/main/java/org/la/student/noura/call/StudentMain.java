@@ -27,7 +27,7 @@ public class StudentMain {
 		
 	}
 	
-	static void reference(Student s) {
+	static void reference(Student s) {//creating another object of student data type with value s
 		System.out.println("id:"+s.getId());
 		System.out.println("name:"+s.getName());
 		s.setId(3);
