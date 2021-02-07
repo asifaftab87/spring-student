@@ -4,7 +4,7 @@ public class DiamondStarPrint {
 	public static void main(String[] args) {
 //		Diamond Pattern
 		
-		int i,j,r=5;
+		int i,j,r=7;
 		
 		 for(i=0;i<=r;i++)
 		   {
