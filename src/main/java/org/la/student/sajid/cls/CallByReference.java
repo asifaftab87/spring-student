@@ -5,7 +5,7 @@ public class CallByReference {
 		int x[]= {100};
 		System.out.println("after x[0] "+x[0]);
 		reference(x);
-		System.out.println("After x[0]: "+x[0]);
+		System.out.println("After x[0]: "+x [0]);
 	}
 //	called method
 	static void reference(int y[]) {
