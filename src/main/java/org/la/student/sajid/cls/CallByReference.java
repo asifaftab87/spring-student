@@ -4,6 +4,7 @@ public class CallByReference {
 	public static void main(String[] args) {
 		int x[]= {100};
 		System.out.println("after x[0] "+x[0]);
+		value(x[0]);
 		reference(x);
 		System.out.println("After x[0]: "+x [0]);
 	}
