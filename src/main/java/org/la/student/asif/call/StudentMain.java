@@ -4,12 +4,15 @@ public class StudentMain {
 
 	public static void main(String[] args) {
 		
+		
 		Student student = new Student();
+	
 		student.setId(1);
 		student.setName("asif");
+		
 		System.out.println("id: "+student.getId());
 		System.out.println("name: "+student.getName());
-		//value(student.getId(), student.getName());
+		value(student.getId(), student.getName());
 		reference(student);
 		System.out.println("after id: "+student.getId());
 		System.out.println("after name: "+student.getName());
