@@ -1,5 +1,11 @@
 package org.la.student.asif.clas;
 
+
+/*
+ * POJO -  Plain old java object
+ * Model
+ * DTO - Data transfer object
+ */
 public class Student {
 
 	private int id;
