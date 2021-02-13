@@ -11,7 +11,7 @@ public class Book {
 		
 		System.out.println("Price" + price);
 		System.out.println("Author Name:"+ authorname );
-		System.out.println("Number of pages" + numpages);
+		System.out.println("Number of pages: " + numpages);
 		System.out.println("Age : " + age);
 	}
 	
@@ -31,6 +31,8 @@ public class Book {
 	public double getPrice() {
 		return price;
 	}
+	
+	
 
 	
 }

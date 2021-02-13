@@ -1,11 +1,5 @@
-package org.la.student.asif.clas;
+package org.la.student.tahir.clas;
 
-
-/*
- * POJO -  Plain old java object
- * Model
- * DTO - Data transfer object
- */
 public class Student {
 
 	private int id;
@@ -13,52 +7,66 @@ public class Student {
 	private String email;
 	private String mobile;
 	
-	//default constructor, parameter less constructor
+	//parameterless constructor
+	
 	public Student() {
-		System.out.println("object created");
-		id = -1;
-		name = "";
-		email = "";
-		mobile = "";
+		
+		id= 01;
+		name="";
+		email="";
+		mobile= "....";
 		
 	}
 	
-	//parameterized constructor
-	public Student(int i, String n, String e, String m) {
-		System.out.println("object created");
-		id = i;
-		name = n;
-		email = e;
-		mobile = m;
+	
+	//parametrized costructor
+	
+	public Student(int a, String b, String c, String d) {
+		
+		id=a;
+		name=b;
+		email=c;
+		mobile=d;
+		
 	}
 	
 	public int getId() {
 		return id;
 	}
+	
 	public void setId(int id) {
-		this.id = id;
+		
+		this.id= id;
 	}
+	
 	public String getName() {
+		
 		return name;
 	}
+	
 	public void setName(String name) {
-		this.name = name;
+		this.name= name;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
-		this.email = email;
+		this.email= email;
 	}
+	
 	public String getMobile() {
 		return mobile;
+		
 	}
+	
 	public void setMobile(String mobile) {
-		this.mobile = mobile;
+		this.mobile=mobile;
 	}
+	
 	
 	public void display() {
 		System.out.println("id: "+id+"  name: "+name+"  email: "+email+"  mobile: "+mobile);
 	}
-	
 }
