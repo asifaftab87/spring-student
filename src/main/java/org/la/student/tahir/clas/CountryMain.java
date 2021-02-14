@@ -6,10 +6,13 @@ public class CountryMain {
 		
 		//
 		Country.statMethod();
+	
 		Country c = new Country();
 		Country c1 = new Country();
 		Country c2 = new Country();
+		
 		c.instanceMethod();
+		
 		c.name="Tahir";
 		c1.name= "Usman";
 		c2.name= "Aminu";

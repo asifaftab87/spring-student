@@ -6,5 +6,6 @@ public class StateMain {
 		
 		State state = new State();
 		state.instMethod();
+		
 	}
 }
