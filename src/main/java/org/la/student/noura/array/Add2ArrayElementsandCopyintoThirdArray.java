@@ -9,6 +9,7 @@ public class Add2ArrayElementsandCopyintoThirdArray {
 		int b[]= {5,4,6,7,9};
 		int c[]= new int [a.length];
 		
+		
 		for (int i=0;i<b.length;i++) {
 			
 			c[i]=a[i]+b[i];
