@@ -10,5 +10,8 @@ public class ForEachCls {
 			System.out.println("a["+i+"] = "+a[i]);
 		}
 		
+		for(int x:a) {
+			System.out.println(x);
+		}
 	}
 }

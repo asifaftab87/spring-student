@@ -10,8 +10,6 @@ public class Student {
 	public void neew() {
 		
 		System.out.println("From call package");
-		
-		
 	}
 	
 	public int getId() {
