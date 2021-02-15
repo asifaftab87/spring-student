@@ -6,6 +6,7 @@ public class SchoolMain {
 		
 		Student student = new Student(1, "jain", "id@mail.com", "734502");
 		
+		
 		School school = new School();
 		school.setName("wahed");
 		school.setStudent(student);

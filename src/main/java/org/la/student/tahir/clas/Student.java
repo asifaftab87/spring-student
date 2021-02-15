@@ -22,7 +22,7 @@ public class Student {
 	//parametrized costructor
 	
 	public Student(int a, String b, String c, String d) {
-		
+		System.out.println("Object Created");
 		id=a;
 		name=b;
 		email=c;
