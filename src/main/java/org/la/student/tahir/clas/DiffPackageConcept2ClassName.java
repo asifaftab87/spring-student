@@ -26,7 +26,6 @@ public class DiffPackageConcept2ClassName {
 		System.out.println(student2.getId());
 		System.out.println(student2.getName());
 		System.out.println(student2.getEmail());
-
-	}
+}
 
 }
