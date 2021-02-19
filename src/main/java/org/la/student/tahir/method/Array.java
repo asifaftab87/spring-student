@@ -7,10 +7,12 @@ public class Array {
 		avr();
 		min();
 		secondlargest();
-	
+		printOddNo();
+		printEvenNo();
+		primeNo();
 	}
  
-	static int b = 4;
+	static int b = 20;
 
 	
 	
@@ -25,7 +27,7 @@ public class Array {
 	for(int i=0;i<a.length;i++) {
 		
 		a[i]= i+1;
-		System.out.print( a[i]);
+		System.out.print( a[i]+" ");
 		
 		
 	}
@@ -94,5 +96,78 @@ public class Array {
 		System.out.println("The second largest element is: " +secondlargest);
 	}
 	
+	public static void printOddNo() {
+
+		int[] a = new int[b];
+		
+		for(int i=0; i<a.length; i++) {
+			
+			a[i]=i+1;
+			
+		}
+		System.out.print("The odd numbers are: " );
+		for(int i=0; i<a.length; i++) {
+			
+			if(a[i]%2 != 0) {
+				System.out.print(a[i]+" ");
+			}
+		}
+		
+	}
+	
+	
+	
+	public static void printEvenNo() {
+		System.out.println();
+		int[] a = new int[b];
+		
+		for(int i=0; i<a.length; i++) {
+			
+			a[i]=i+1;
+			
+		}
+		System.out.print("The even numbers are: " );
+		for(int i=0; i<a.length; i++) {
+			
+			if(a[i]%2 == 0) {
+				System.out.print(a[i]+" ");
+			}
+		}
+		}
+		
+	
+	
+
+	public static void primeNo() {
+		System.out.println();
+		int[] a = new int[b];
+		
+		for(int i=0; i<a.length; i++) {
+			
+			a[i]=i+1;
+		
+		}
+		System.out.print("The prime numbers are: " );
+		
+		for(int i=0; i<a.length+1; i++) {
+			
+			boolean isprime=true;
+			
+			for(int j=2; j<i; j++) {
+				
+				if(i%j ==0) {
+					
+					isprime = false;
+					break;
+				}
+			
+				
+			}
+			if(isprime)
+				System.out.print(i + " ");
+			
+	
+	
 
 }
+}}
