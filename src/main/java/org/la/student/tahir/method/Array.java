@@ -10,6 +10,9 @@ public class Array {
 		printOddNo();
 		printEvenNo();
 		primeNo();
+		CopyArrayInReverseOrder();
+		copyArraytoOneArray();
+		addElementsof2ArrayIntoThirdArray();
 	}
  
 	static int b = 20;
@@ -96,6 +99,8 @@ public class Array {
 		System.out.println("The second largest element is: " +secondlargest);
 	}
 	
+	//OddNo
+	
 	public static void printOddNo() {
 
 		int[] a = new int[b];
@@ -115,7 +120,7 @@ public class Array {
 		
 	}
 	
-	
+	//EvenNo
 	
 	public static void printEvenNo() {
 		System.out.println();
@@ -138,6 +143,8 @@ public class Array {
 	
 	
 
+	//PrimeNo
+	
 	public static void primeNo() {
 		System.out.println();
 		int[] a = new int[b];
@@ -170,4 +177,100 @@ public class Array {
 	
 
 }
-}}
+}
+	
+	
+	//CopyArrayInReverseOrder
+	
+	public static void CopyArrayInReverseOrder() {
+		System.out.println(" ");
+		int[] a = new int[b];
+		int[] b = new int[a.length];
+		
+		for(int i= a.length-1; i>=0; --i) {
+			
+			a[i]= i;
+			b[i]= a[i];
+			
+		}
+		
+		System.out.println("Array A values");
+		
+		for(int i=0; i<=a.length-1; i++) {
+			
+			System.out.println(a[i]);
+		}
+		
+		System.out.println("Array B values");
+		
+		for(int i= b.length-1; i>=0; --i) {
+			
+			System.out.println(b[i]);
+		}
+		
+		
+	}
+	
+	//copy one array into other array
+	public static void copyArraytoOneArray() {
+		
+		int[] a = new int[b];
+		int[] b = new int[a.length];
+		
+		for(int i=0; i<a.length; i++) {
+			
+			a[i]= i;
+			b[i]= a[i];
+			
+		}
+		
+		System.out.println("Elements of Array A");
+		
+		for(int i=0; i< a.length; i++) {
+			
+			System.out.println(a[i]);
+		}
+		
+		System.out.println("Elements of Array B");
+		
+		for(int i=0; i<b.length;i++) {
+			
+			System.out.println(b[i]);
+		}
+	}
+	
+	//add two array elements n copy into third array
+	
+	public static void addElementsof2ArrayIntoThirdArray() {
+		System.out.println("Adding two arrays into a third array");
+		
+		int[] a = {2,3,4};
+		int[] b = {1,8,9};
+		
+		int arr1= a.length;
+		int arr2= b.length;
+		
+		int[] c = new int[arr1 + arr2];
+		int i=0;
+		
+		for(; i<a.length;i++) {
+			
+			c[i]= a[i];
+		}
+		
+		for(int j=0; j<b.length; j++) {
+			
+			c[i]= b[j];
+		
+			i++;
+		}
+		
+		for(int x=0; x< c.length; x++) {
+			
+			System.out.println(c[x]);
+			
+		}
+		
+	}
+	
+}
