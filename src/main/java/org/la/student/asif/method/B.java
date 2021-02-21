@@ -6,5 +6,8 @@ public class B extends A {
 
 	public void bMethodDP() {
 		System.out.println("bMethodDP of B class different package");
+		protect();
+		
+		
 	}
 }
