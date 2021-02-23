@@ -9,6 +9,11 @@ public class Triangle extends Shape {
 		super.Draw();
 	}
 	
+	public Triangle(int id){
+		super(id);
+		System.out.println("Parametized constructor of Triangle class, id= " + id);
+	}
+	
 public void Draw() {
 		
 		System.out.println("Draw method of Triangle class");
