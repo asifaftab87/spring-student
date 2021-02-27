@@ -4,10 +4,8 @@ public class VehicleMain {
 
 	public static void main(String[] args) {
 		
-		Vehicle vehicle = new Bike();
+		Vehicle vehicle = new Bus();	//tight coupling 
 		Build.print(vehicle);
 		
-		vehicle = new Car();
-		Build.print(vehicle);
 	}
 }
