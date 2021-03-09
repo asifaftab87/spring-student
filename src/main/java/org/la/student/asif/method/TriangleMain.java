@@ -8,6 +8,6 @@ public class TriangleMain {
 		
 		//Shape shape = new Triangle(2);
 		Shape shape2 = new Triangle();
-		//shape.draw();
+		//shape2.draw();
 	}
 }
