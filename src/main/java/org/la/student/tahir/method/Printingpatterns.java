@@ -43,7 +43,7 @@ public class Printingpatterns {
 				System.out.print("*");
 			}
 			
-			System.out.println(" ");
+			System.out.println("p");
 		}
 		
 	}
@@ -61,6 +61,8 @@ static void increasedstarR(int x ) {
 			
 			System.out.println(" ");
 		}
+		
+		System.out.println(" 1");
 		
 	}
 
