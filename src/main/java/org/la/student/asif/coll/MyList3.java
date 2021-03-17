@@ -14,8 +14,10 @@ public class MyList3 {
 		list.add(1);
 		
 		for(int k=0 ; k<list.size() ; k++) {
-			int j = list.get(k);				
-			System.out.println("j: "+j);
+			//int j = list.get(k);				
+			
+			System.out.println(list.get(k));
+			//System.out.println("j: "+j);
 		}
 		
 		for(Integer i : list) {

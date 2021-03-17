@@ -11,6 +11,7 @@ public class UserList {
 		
 		List<City> cityList = new ArrayList<>();
 		
+		
 		City city1 = new City("kolkata", "India");
 		City city2 = new City("Singapore", "Singapore");
 		City city3 = new City("kuala lumpur", "Malaysia");
@@ -22,12 +23,13 @@ public class UserList {
 		cityList.add(city4);
 		
 		for(int i=0 ; i<cityList.size() ; i++) {
-			//System.out.println(i+" : "+cityList.get(i).getCountry().toUpperCase()+"   "+cityList.get(i).getName().toLowerCase());
+			System.out.println(i+" : "+cityList.get(i).getCountry().toUpperCase()+"   "+cityList.get(i).getName().toLowerCase());
 		}
 		
 		for(int i=0 ; i<cityList.size() ; i++) {
 			City city = cityList.get(i); 
-			//System.out.println(i+" : "+city.getCountry()+"   "+city.getName());
+		
+			System.out.println(i+" : "+city.getCountry()+"   "+city.getName());
 		}
 		
 		for(City city : cityList) {

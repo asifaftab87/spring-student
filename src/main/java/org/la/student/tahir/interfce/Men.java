@@ -9,5 +9,10 @@ public class Men implements Human {
 		
 	}
 
+	@Override
+	public void tahir() {
+		System.out.println("This is Tahir");
+	}
+
 	
 }

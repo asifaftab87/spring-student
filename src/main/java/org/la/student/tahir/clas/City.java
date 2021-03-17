@@ -18,8 +18,11 @@ public class City {
 		System.out.println("1 parameter Constructor");
 	}
 	
-	City (String name ,String country){
+	public City (String n ,String c){
 		this(" ");
+		name= n;
+		country = c;
+		
 		System.out.println("This parametized Constructor");
 	}
 	
