@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.la.student.tahir.clas.City;
 
-public class UsreList {
+public class UserList {
 
 	public static void main(String[] args) {
 
