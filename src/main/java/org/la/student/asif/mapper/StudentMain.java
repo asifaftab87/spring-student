@@ -20,12 +20,12 @@ public class StudentMain {
 		student.setStandard(1);
 		
 		StudentMain studentMain = new StudentMain();
-		//StudentDto studentDto = studentMain.studentToStudentDto(student);
-		StudentDto studentDto = studentMain.studentToStudentDtoMapper(student);
+		StudentDto studentDto = studentMain.studentToStudentDto(student);
+		//StudentDto studentDto = studentMain.studentToStudentDtoMapper(student);
 		System.out.println(studentDto); 	
 	}
 	
-	/*
+	
 	public StudentDto studentToStudentDto(Student student) {
 		
 		StudentDto dto = new StudentDto();
@@ -37,7 +37,7 @@ public class StudentMain {
 		dto.setStandard(student.getStandard());
 		return dto;
 	}
-	*/
+	
 	public StudentDto studentToStudentDtoMapper(Student student) {
 		StudentDto dto = mapper.map(student, StudentDto.class);
 		return dto;
