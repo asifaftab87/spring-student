@@ -119,24 +119,19 @@ void trimToSize(){}
 		a1.add("C");
 		a1.add("D");
 		a1.add("E");
-		System.out.println(a1);
+		System.out.println(a1);//[A, B, A, C, D, E]
 		
 		for(Object l : a1) {
 			System.out.println(l);
 		}
 
-		a1.remove(0);
-		
-		System.out.println();
+		a1.remove(0);//[B, A, C, D, E]
 		System.out.println(a1);
 		
-		a1.remove(2);
-		System.out.println();
+		a1.remove(2);//[B, A, D, E]
 		System.out.println(a1);
 		
-		a1.add(0,"87" );
-		
-		System.out.println();
+		a1.add(0,"87" );//[87, B, A, D, E]
 		System.out.println(a1);
 		
 		/*
