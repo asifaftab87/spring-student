@@ -24,15 +24,15 @@ public class StudentMain {
 		
 		StudentMain main = new StudentMain();
 		
-		//System.out.println(main.studenToStudentDto(student));
+		System.out.println(main.studenToStudentDto(student));
 		
 		
-		System.out.println(main.studentToStudentDtoMapper(student));
+	//	System.out.println(main.studentToStudentDtoMapper(student));
 		
 
 	}
 	
-	/*public StudentDto studenToStudentDto( Student student) {
+	public StudentDto studenToStudentDto( Student student) {
 		
 		StudentDto dto = new  StudentDto();
 		
@@ -46,7 +46,7 @@ public class StudentMain {
 		
 		return dto;
 		
-	}*/
+	}
 	
 	
 	
