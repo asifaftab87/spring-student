@@ -1,4 +1,4 @@
-package org.la.student.aqsa;
+package org.la.student.aqsa.ModelAndDto;
 
 public class StudentMain {
 	

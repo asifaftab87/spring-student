@@ -1,7 +1,7 @@
-package org.la.student.aqsa;
+package org.la.student.aqsa.ModelAndDto;
 
-public class User {
-	
+public class UserDto {
+
 	private  int id;
 	private String name, dob, email;
 	
@@ -30,5 +30,8 @@ public class User {
 		this.id=id;
 	}
 
-
+public String toString() {
+	return id+" "+" "+name+" "+dob+" "+email+" ";
+	
+}
 }

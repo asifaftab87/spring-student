@@ -1,6 +1,7 @@
-package org.la.student.aqsa;
+package org.la.student.aqsa.ModelAndDto;
 
 import org.dozer.DozerBeanMapper;
+import org.la.student.aqsa.ModelAndDto.UserDto;
 
 public class UserMapper {
 	DozerBeanMapper mapper = new DozerBeanMapper();
