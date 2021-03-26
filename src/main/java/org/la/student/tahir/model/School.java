@@ -2,9 +2,6 @@ package org.la.student.tahir.model;
 
 public class School {
 	
-	/*create a model class Student having fields id, name, dob, email, schoolId
-	create a dto class StudentDto having fields id, name, dob, email, schoolId
-	copy from model to dto class manually as well as automatically using dozerbeanmapper class and print.*/
 	
 	/*create a model class School having fields schoolId, name, registrationDate, medium, address
 		create a dto class SchoolDto having fields schoolId, name, registrationDate, medium, address

@@ -6,7 +6,7 @@ public class WrapClass {
 	
 		Integer i = 2;		//Boxing
 		Integer o = new Integer(3);
-		int k = i; 
+		int k = i;  //Unboxing 
 		int j = o;
 		
 		System.out.println("i: "+i);
