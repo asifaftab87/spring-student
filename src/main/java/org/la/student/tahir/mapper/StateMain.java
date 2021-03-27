@@ -1,10 +1,14 @@
 package org.la.student.tahir.mapper;
 
+import org.dozer.DozerBeanMapper;
 import org.la.student.tahir.dto.StateDto;
 import org.la.student.tahir.model.State;
 
 public class StateMain {
 
+	
+	DozerBeanMapper mapper = new DozerBeanMapper();
+	
 	public static void main(String[] args) {
 		
 		State state = new State();
@@ -16,6 +20,7 @@ public class StateMain {
 		
 		StateMain main = new StateMain();
 		System.out.println(main.StateToStateDto(state));
+		System.out.println(main.StateToStateDtoMapper(state));
 	
 	}
 	
@@ -32,5 +37,11 @@ public class StateMain {
 		
 	}
 	
+
+	public StateDto StateToStateDtoMapper(State state) {
+		
+		StateDto dto = mapper.map(state, StateDto.class);
+		return dto;
+		}
 
 }
