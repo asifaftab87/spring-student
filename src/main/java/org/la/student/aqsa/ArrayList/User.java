@@ -1,6 +1,7 @@
 package org.la.student.aqsa.ArrayList;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class User {
 	private int id;
@@ -45,7 +46,8 @@ public class User {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<User> l = new ArrayList<User>();
+		
+		List<User> l = new ArrayList<>();
 		
 		User u1 = new User(88,"Amit","1988","amit@gmail.com");
 		User u2 = new User(99,"Abhishek","1977","abhishek@gmail.com");
