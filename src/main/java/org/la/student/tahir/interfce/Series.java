@@ -4,13 +4,19 @@ public interface Series {
 	
 
 		public void fibonocci();
-		/*public void pell();
+		public void pell();
 		public void square();
 		public void cube();
+	
+	
 		public void firstTenNaturalNum();
+		
+		
 		public void firstTenEvenNum();
+		
+		
 		public void firstTenOddNum();
-		public void printNumBetween90N100();*/
+		public void printNumBetween90N100();
 		
 
 }

@@ -7,6 +7,13 @@ public class SeriesMain {
 		Series series = new ImplementSeries();
 		
 		series.fibonocci();
+		series.pell();
+		series.square();
+		series.cube();
+		series.firstTenNaturalNum();
+		series.firstTenEvenNum();
+		series.firstTenOddNum();
+		series.printNumBetween90N100();
 	}
 
 }
