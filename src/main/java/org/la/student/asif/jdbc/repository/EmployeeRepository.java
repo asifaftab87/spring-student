@@ -12,14 +12,15 @@ import java.util.List;
 
 import org.la.student.asif.jdbc.model.Employee;
 
-public class EmpRepository {
+public class EmployeeRepository {
+	
 	static Connection con = null;
 
 	public static void ConnectionOpen() {
 		
 		try {
 			//Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?serverTimezone=UTC","root","root");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?serverTimezone=UTC","root","root");
 			if(con!=null) {
 				System.out.println("connection to mysql successful");
 			}
@@ -39,6 +40,7 @@ public class EmpRepository {
 		ResultSet rs = null;
 		
 		List<Employee> empList = new ArrayList<>();
+		
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery("SELECT * FROM empolyee");
@@ -288,7 +290,7 @@ public class EmpRepository {
 		ResultSet rs = null;
 		List<Employee> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE joinedDate BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee WHERE releaseDate BETWEEN ? AND ?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setDate(1, fromReleaseDate);
 			pStmt.setDate(2, toReleaseDate);
@@ -481,11 +483,16 @@ public class EmpRepository {
 	}
 	
 	public static void create(Employee employee) {
+		
 		PreparedStatement pStmt = null;
+		
 		try {
-			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?)";
+			
+			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+			
 			pStmt = con.prepareStatement(sql);
-			pStmt.setInt(1, employee.getId());
+			
+			pStmt.setInt(1, (int)Math.random());
 			pStmt.setString(2, employee.getName());
 			pStmt.setDate(3, employee.getDob());
 			pStmt.setString(4, employee.getEmailId());
@@ -495,8 +502,10 @@ public class EmpRepository {
 			pStmt.setInt(8, employee.getNoticePeriod());
 			pStmt.setDate(9, employee.getCreateDate());
 			pStmt.setDate(10, employee.getUpdateDate());
+			pStmt.setInt(11, employee.getAge());
 			
 			int executeUpdate = pStmt.executeUpdate();
+			
 			if(executeUpdate > 0) {
 				System.out.println(executeUpdate + "data added successfully");
 			}

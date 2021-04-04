@@ -6,6 +6,7 @@ import java.sql.Date;
 public class Employee implements Serializable{
 	
 	private static final long serialVersionUID = -8545901547885450379L;
+	
 	private int id;
 	private String name;
 	private Date dob;

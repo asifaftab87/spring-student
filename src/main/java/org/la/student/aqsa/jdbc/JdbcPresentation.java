@@ -14,7 +14,7 @@ public class JdbcPresentation {
 
 			try {
 				// here sys is database name, root is username and password
-				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys?serverTimezone=UTC", "root", "root");
+				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?serverTimezone=UTC", "root", "root");
 				
 				if (con != null) {
 					System.out.println("connected successfully");

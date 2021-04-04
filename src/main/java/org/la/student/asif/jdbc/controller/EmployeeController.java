@@ -4,28 +4,30 @@ import java.sql.Date;
 import java.util.List;
 
 import org.la.student.asif.jdbc.model.Employee;
-import org.la.student.asif.jdbc.service.EmpService;
+import org.la.student.asif.jdbc.service.EmployeeService;
 
-public class EmpController {
+public class EmployeeController {
 
-	EmpService empService = null;
+	EmployeeService empService = null;
 	
-	public EmpController() {
-		empService = new EmpService();
+	public EmployeeController() {
+		empService = new EmployeeService();
 	}
 	
 	public static void main(String[] args) {
 		
-		EmpController empControl = new EmpController();
+		EmployeeController empControl = new EmployeeController();
+		empControl.addEmployee();
+		
 		//empControl.addEmployee();
 		
 		//empControl.findById(1);
 		
 		//empControl.findByName("aftab");
 		
-		Date fromDate = Date.valueOf("1980-01-01");
-		Date toDate = Date.valueOf("1997-12-30");
-		empControl.findByAge(fromDate, toDate);
+		//Date fromDate = Date.valueOf("1980-01-01");
+		//Date toDate = Date.valueOf("1997-12-30");
+		//empControl.findByAge(fromDate, toDate);
 		
 	}
 	
@@ -56,19 +58,22 @@ public class EmpController {
 	void addEmployee() {
 
 		System.out.println("----------Adding employee---------------");
+		
 		Employee employee = new Employee();
-		employee.setName("");
-		Date dob = Date.valueOf("1987-10-11");
+		
+		employee.setName("jawed");
+		Date dob = Date.valueOf("1900-11-01");
 		employee.setDob(dob);
-		employee.setEmailId("fama@mail.com");
+		employee.setEmailId("jawed@mail.com");
 		employee.setGender("male");
-		dob = Date.valueOf("2016-1-28");
+		dob = Date.valueOf("2016-11-28");
 		employee.setJoinedDate(dob);
-		dob = Date.valueOf("2019-4-18");
+		dob = Date.valueOf("2021-4-18");
 		employee.setReleaseDate(dob);
 		employee.setNoticePeriod(45);
 		employee.setCreateDate(new Date(new java.util.Date().getTime()));
 		employee.setUpdateDate(new Date(new java.util.Date().getTime()));
+		employee.setAge(34);
 		
 		empService.create(employee);
 		
