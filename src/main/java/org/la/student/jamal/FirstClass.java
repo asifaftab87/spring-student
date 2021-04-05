@@ -14,6 +14,8 @@ public class FirstClass {
 		
 	   System.out.println("My name is " + name +" I live in "+ live +" I am learning "+ learning  );
 	   
+	   System.out.println(" thank you ");
+	   
 		
 		
 		
