@@ -3,6 +3,7 @@ package org.la.student.tahir.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PresentationAttendance {
@@ -12,7 +13,7 @@ public class PresentationAttendance {
 		PresentationAttendance pAttendance = new PresentationAttendance();
 		
 		 
-		 PreparedStatement pStatement = null;
+		 //PreparedStatement pStatement = null;
 		 
 		 Connection con = null;
 			
@@ -27,6 +28,7 @@ public class PresentationAttendance {
 					pAttendance.create(con, 3, 11, 21);
 					pAttendance.update(con, 1, 14, 24);
 					pAttendance.delete(con, 2);
+					pAttendance.read(con);
 					
 					
 					
@@ -48,6 +50,60 @@ public class PresentationAttendance {
 				}
 			}
 		}
+	
+public void read(Connection con) {
+		
+		PreparedStatement pStatement = null;
+		ResultSet rs = null;
+		
+		try {
+			
+			String query ="SELECT * FROM presentation_attendance ";
+			
+			pStatement = con.prepareStatement(query);
+			
+			rs = pStatement.executeQuery();
+			
+			while(rs.next()){
+				System.out.println(rs.getInt(1) +" "+ rs.getInt(2)+" "+ rs.getInt(3));
+				
+			}
+			
+			
+			
+		}
+		
+		catch(Exception e) {
+			
+			System.out.println(e.getMessage());
+		}
+		
+		finally {
+			
+			try {
+				
+				if(pStatement != null) {
+					pStatement.close();
+				}
+			}
+			
+			catch(SQLException e) {
+				
+				e.printStackTrace();
+			}
+			try {
+				if(rs != null) {
+					rs.close();
+				}
+			}
+			
+			catch(SQLException e) {
+				
+				e.printStackTrace();
+			}
+		}
+	}
+
 	
 	public void create(Connection con, int ticket_id, int presentation_id, int attendee_id) {
 

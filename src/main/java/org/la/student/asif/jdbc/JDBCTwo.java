@@ -32,19 +32,22 @@ public class JDBCTwo {
 			
 			if (con != null) {
 				System.out.println("connected successfully");
-				//jdbc.read(con);
-				//jdbc.read(con, 20);
+				jdbc.read(con);
+				//jdbc.read(con, 70);
 				//jdbc.create(con, "amin khan", 11);
 				//jdbc.update(con, "jamil fine", 9, 10);
-				jdbc.delete(con, 12);
+				//jdbc.delete(con, 12);
 			} else {
 				System.out.println("failed to connect");
 			}
 			// jdbc.create(con, "jain", 60);
-			// jdbc.update(con, "jain", 87, 13);
-			// jdbc.delete(con, 16);
-			// jdbc.read(con, 18);
-		} catch (Exception e) {
+			 //jdbc.update(con, "jain", 87, 10);
+			 //jdbc.delete(con, 12);
+		//jdbc.read(con, 18);
+		} 
+		
+		
+		catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {
 			try {
@@ -64,6 +67,7 @@ public class JDBCTwo {
 		try {
 			String query = " select * from emp ";
 			pStatement = con.prepareStatement(query);
+		
 			
 			rs = pStatement.executeQuery();
 
@@ -175,7 +179,10 @@ public class JDBCTwo {
 			} else {
 				System.out.println("faile to update: " + executeUpdate);
 			}
-		} catch (SQLException se) {
+		} 
+		
+		
+		catch (SQLException se) {
 			se.printStackTrace();
 		} catch (Exception e) {
 			System.out.println(e);
