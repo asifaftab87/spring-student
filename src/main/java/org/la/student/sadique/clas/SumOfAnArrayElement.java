@@ -14,5 +14,7 @@ public class SumOfAnArrayElement {
 		System.out.print(sum );
 
 	}
+	
+	
 
 }

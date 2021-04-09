@@ -9,6 +9,7 @@ public class PrintingPatterns1 {
 		increasedStarRight(a);
 		decreasedStar(a);
 		decreasedStarR(a);
+		Diamond(a);
 
 	}
 	
@@ -72,6 +73,28 @@ public class PrintingPatterns1 {
 			}
 			
 			System.out.println(" ");
+		}
+	}
+	
+	static void Diamond( int x) {
+		
+		for(int i=-x; i<=x; i++) {
+			
+			int k=i;
+			
+			if (k<0)
+			k=-k;
+			
+			for(int j = 0; j<=k; j++) {
+				System.out.print(" ");
+			}
+			
+			for(int j=k; j<=x; j++) {
+				
+				System.out.print("* ");
+			}
+			
+			System.out.println("");
 		}
 	}
 	

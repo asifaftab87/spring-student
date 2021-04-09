@@ -4,7 +4,7 @@ public class PatternPrintDiamond {
 
 	public static void main(String[] args) {
 		PatternPrintDiamond obj = new PatternPrintDiamond();
-		obj.diamond(1);
+		obj.diamond(3);
 	}
 	
 	public void diamond(int n) {
