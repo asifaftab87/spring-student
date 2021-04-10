@@ -9,7 +9,7 @@ import org.la.student.asif.jdbc.repository.EmployeeRepository;
 public class EmployeeService {
 	
 	public EmployeeService() {
-		EmployeeRepository.ConnectionOpen();
+		EmployeeRepository.connectionOpen();
 	}
 	
 	public List<Employee> findAll(){

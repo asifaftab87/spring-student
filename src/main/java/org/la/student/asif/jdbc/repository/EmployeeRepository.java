@@ -16,11 +16,11 @@ public class EmployeeRepository {
 	
 	static Connection con = null;
 
-	public static void ConnectionOpen() {
+	public static void connectionOpen() {
 		
 		try {
 			//Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?serverTimezone=UTC","root","root");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/student?serverTimezone=UTC","root","root");
 			if(con!=null) {
 				System.out.println("connection to mysql successful");
 			}
@@ -43,9 +43,11 @@ public class EmployeeRepository {
 		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM empolyee");
+			rs = stmt.executeQuery("SELECT * FROM employee");
 			while(rs.next()) {
+				
 				Employee emp = new Employee();
+				
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -57,6 +59,7 @@ public class EmployeeRepository {
 				emp.setCreateDate(rs.getDate(9));
 				emp.setUpdateDate(rs.getDate(10));
 				emp.setAge(rs.getInt(11));
+				
 				empList.add(emp);
 			}
 		} catch (SQLException e) {
@@ -89,7 +92,7 @@ public class EmployeeRepository {
 		
 		ResultSet rs = null;
 		PreparedStatement pStatement = null;
-		Employee emp = new Employee();
+		Employee emp = null;
 
 		try {
 			String query = "SELECT * FROM employee WHERE id=?";
@@ -99,6 +102,7 @@ public class EmployeeRepository {
 			rs = pStatement.executeQuery();
 			
 			if(rs.next()) {
+				emp = new Employee();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));

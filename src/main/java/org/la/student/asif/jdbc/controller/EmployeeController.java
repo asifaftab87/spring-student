@@ -14,16 +14,21 @@ public class EmployeeController {
 		empService = new EmployeeService();
 	}
 	
+	public void findAll(){
+		List<Employee> empList = empService.findAll();
+		empList.stream().forEach(s -> System.out.println(s));
+	}
+	
 	public static void main(String[] args) {
 		
 		EmployeeController empControl = new EmployeeController();
-		empControl.addEmployee();
-		
+		//empControl.addEmployee();
+		//empControl.findAll();
 		//empControl.addEmployee();
 		
 		//empControl.findById(1);
 		
-		//empControl.findByName("aftab");
+		empControl.findByName("asif");
 		
 		//Date fromDate = Date.valueOf("1980-01-01");
 		//Date toDate = Date.valueOf("1997-12-30");
@@ -43,7 +48,12 @@ public class EmployeeController {
 		System.out.println("----------findbyid employee---------------");
 		
 		Employee employee = empService.findById(id);
-		System.out.println("Employee: "+employee);
+		if(employee==null) {
+			System.out.println("employee not found");
+		}
+		else {
+			System.out.println("Employee: "+employee);
+		}
 	}
 	
 	void findByName(String name) {
@@ -61,19 +71,19 @@ public class EmployeeController {
 		
 		Employee employee = new Employee();
 		
-		employee.setName("jawed");
-		Date dob = Date.valueOf("1900-11-01");
+		employee.setName("alam");
+		Date dob = Date.valueOf("1987-05-11");
 		employee.setDob(dob);
-		employee.setEmailId("jawed@mail.com");
+		employee.setEmailId("alam@mail.com");
 		employee.setGender("male");
-		dob = Date.valueOf("2016-11-28");
+		dob = Date.valueOf("2019-01-18");
 		employee.setJoinedDate(dob);
-		dob = Date.valueOf("2021-4-18");
+		dob = Date.valueOf("2011-07-28");
 		employee.setReleaseDate(dob);
-		employee.setNoticePeriod(45);
+		employee.setNoticePeriod(15);
 		employee.setCreateDate(new Date(new java.util.Date().getTime()));
 		employee.setUpdateDate(new Date(new java.util.Date().getTime()));
-		employee.setAge(34);
+		employee.setAge(84);
 		
 		empService.create(employee);
 		
