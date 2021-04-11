@@ -25,7 +25,7 @@ public class Exercise1 {
 	 System.out.println(name2);
 	 System.out.println(name3);
 	
-	 for (k=0;k<5;k++) {
+	 for (k=0;k<6;k++) {
 			System.out.println(" World Hello");
 		}
 	}
