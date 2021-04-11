@@ -7,6 +7,7 @@ public class Exercise1 {
 		int j;
 		int k;
 		char a= 'B';
+		char d = 'C';
 		double b= 3.5;
 		float c= 34.5f;
 		String name1= "java World ";
@@ -16,8 +17,8 @@ public class Exercise1 {
 			System.out.println("Hello World");
 		}
 			
-	 System.out.println(i);
-	 System.out.println(a);
+	 System.out.println(i); 
+	 System.out.println(a + " " + d);
 	 System.out.println(b);
 	 System.out.println(c);
 	 System.out.println(name1);
