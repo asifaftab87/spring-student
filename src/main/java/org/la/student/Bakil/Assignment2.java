@@ -4,29 +4,29 @@ public class Assignment2 {
 
 	public static void main(String[] args) {
 		
-		//1-wap to create and print a char variable?
+		//1- wap to create and print a char variable?
 		char w='R';
 		System.out.println("The char created is: "+ w +'\n');
 		
-		//2-wap to create and print a float variable?
+		//2- wap to create and print a float variable?
 		float f=7688f;
 		System.out.println("The float value of F = "+f +'\n');
 		
-		//3-wap to create and print a short variable?
+		//3- wap to create and print a short variable?
 		short b=20998;
 		System.out.println("The short value of B = "+ b +'\n');
 		
-		//4-wap to create and print a boolean variable?
+		//4- wap to create and print a boolean variable?
 		boolean value1=4>5;
 		boolean value2=6>5;
 		System.out.println("Is 4 > 5 ? the answer is :" + value1 );
 		System.out.println("Is 6 > 5 ? the answer is :"+ value2 +'\n');
 		
-		//5-wap to create and print a double variable?
+		//5- wap to create and print a double variable?
 		double s=2330;
 		System.out.println("The double value of S = "+s+'\n');
 		
-		//6-wap to create and print a long variable?
+		//6- wap to create and print a long variable?
 		long a=10002l;
 		System.out.println("The long value of A = "+a +'\n');
 		
