@@ -1,5 +1,6 @@
+package org.la.student.bakil;
 
-public class exersise1 {
+public class Exersise1 {
 
 	public static void main(String[] args) {
 	
