@@ -3,18 +3,18 @@ package org.la.student.tahir.jdbc.controller;
 import java.sql.Date;
 import java.util.List;
 
-import org.la.student.tahir.jdbc.controller.EmployeeController;
+import org.la.student.tahir.jdbc.controller.Employee1Controller;
 import org.la.student.tahir.jdbc.model.Employee1;
-import org.la.student.tahir.jdbc.service.EmployeeService;
+import org.la.student.tahir.jdbc.service.Employee1Service;
 
-public class EmployeeController {
+public class Employee1Controller {
 
 	
-	EmployeeService empService = new EmployeeService ();
+	Employee1Service empService = new Employee1Service ();
 
 	//EmployeeService empService = null;
 	
-	public EmployeeController() {
+	public Employee1Controller() {
 		//empService = new EmployeeService();
 	}
 	
@@ -25,7 +25,7 @@ public class EmployeeController {
 	
 	public static void main(String[] args) {
 		
-		EmployeeController empControl = new EmployeeController();
+		Employee1Controller empControl = new Employee1Controller();
 		empControl.addEmployee();
 		//empControl.findAll();
 		//empControl.addEmployee();

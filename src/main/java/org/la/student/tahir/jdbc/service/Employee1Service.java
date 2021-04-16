@@ -4,22 +4,22 @@ import java.sql.Date;
 import java.util.List;
 
 import org.la.student.tahir.jdbc.model.Employee1;
-import org.la.student.tahir.jdbc.repository.EmployeeRepository;
+import org.la.student.tahir.jdbc.repository.Employee1Repository;
 
-public class EmployeeService {
+public class Employee1Service {
 
 
-	public EmployeeService() {
-		EmployeeRepository.connectionOpen();
+	public Employee1Service() {
+		Employee1Repository.connectionOpen();
 	}
 	
 	public List<Employee1> findAll(){
-		List<Employee1> empList = EmployeeRepository.findAll();
+		List<Employee1> empList = Employee1Repository.findAll();
 		return empList;
 	}
 	
 	public List<Employee1> findByName(String name){
-		List<Employee1> empList = EmployeeRepository.findByName(name);
+		List<Employee1> empList = Employee1Repository.findByName(name);
 		return empList;
 	}
 	
@@ -28,40 +28,40 @@ public class EmployeeService {
 	}
 	
 	public Employee1 findById(int id){
-		return EmployeeRepository.findById(id);
+		return Employee1Repository.findById(id);
 	}
 	
 	public Employee1 findByEmailId(String emailId) {
-		return EmployeeRepository.findByEmailId(emailId);
+		return Employee1Repository.findByEmailId(emailId);
 	}
 	public List<Employee1> findByDob(Date fromDobDate, Date toDobDate){
-		return EmployeeRepository.findByDob(fromDobDate, toDobDate);
+		return Employee1Repository.findByDob(fromDobDate, toDobDate);
 	}
 	
 	public List<Employee1> findByJoinedDate(Date fromJoinedDate, Date toJoinedDate){
-		return EmployeeRepository.findByJoinedDate(fromJoinedDate, toJoinedDate);
+		return Employee1Repository.findByJoinedDate(fromJoinedDate, toJoinedDate);
 	}
 	
 	public List<Employee1> findByReleaseDate(Date fromReleaseDate, Date toReleaseDate){
-		return EmployeeRepository.findByReleaseDate(fromReleaseDate, toReleaseDate);
+		return Employee1Repository.findByReleaseDate(fromReleaseDate, toReleaseDate);
 	}
 	
 	public List<Employee1> findByNoticePeriod(int noticePeriod){
-		return EmployeeRepository.findByNoticePeriod(noticePeriod);
+		return Employee1Repository.findByNoticePeriod(noticePeriod);
 	}
 	
 	public List<Employee1> findByGender(String gender){
-		return EmployeeRepository.findByGender(gender);
+		return Employee1Repository.findByGender(gender);
 	}
 	
 	
 	public void create(Employee1 employee) {
 		
-		EmployeeRepository.create(employee);
+		Employee1Repository.create(employee);
 	}
 	
 	public static void update() {
-		EmployeeRepository.update();
+		Employee1Repository.update();
 		Employee1 employee = new Employee1();
 		employee.setCreateDate(new Date(new java.util.Date().getTime()));
 		employee.setUpdateDate(new Date(new java.util.Date().getTime()));

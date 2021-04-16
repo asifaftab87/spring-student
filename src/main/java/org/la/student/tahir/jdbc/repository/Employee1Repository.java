@@ -12,7 +12,7 @@ import java.util.List;
 
 import org.la.student.tahir.jdbc.model.Employee1;
 
-public class EmployeeRepository {
+public class Employee1Repository {
 
 	static Connection con= null;
 	
