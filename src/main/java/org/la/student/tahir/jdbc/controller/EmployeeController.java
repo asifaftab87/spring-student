@@ -1,10 +1,11 @@
-package org.la.student.asif.jdbc.controller;
+package org.la.student.tahir.jdbc.controller;
 
 import java.sql.Date;
 import java.util.List;
 
-import org.la.student.asif.jdbc.model.Employee;
-import org.la.student.asif.jdbc.service.EmployeeService;
+import org.la.student.tahir.jdbc.controller.EmployeeController;
+import org.la.student.tahir.jdbc.model.Employee1;
+import org.la.student.tahir.jdbc.service.EmployeeService;
 
 public class EmployeeController {
 
@@ -18,20 +19,20 @@ public class EmployeeController {
 	}
 	
 	public void findAll(){
-		List<Employee> empList = empService.findAll();
+		List<Employee1> empList = empService.findAll();
 		empList.stream().forEach(s -> System.out.println(s));
 	}
 	
 	public static void main(String[] args) {
 		
 		EmployeeController empControl = new EmployeeController();
-		//empControl.addEmployee();
+		empControl.addEmployee();
 		//empControl.findAll();
 		//empControl.addEmployee();
 		
 		//empControl.findById(1);
 		
-		empControl.findByName("asif");
+		empControl.findByName("alam");
 		
 		//Date fromDate = Date.valueOf("1980-01-01");
 		//Date toDate = Date.valueOf("1997-12-30");
@@ -43,14 +44,14 @@ public class EmployeeController {
 		
 		System.out.println("----------findbydob fromdate to todate employee---------------");
 		
-		List<Employee> employeeList = empService.findByAge(fromDobDate, toDobDate);
+		List<Employee1> employeeList = empService.findByAge(fromDobDate, toDobDate);
 		System.out.println(employeeList);
 	}
 	
 	void findById(int id) {
 		System.out.println("----------findbyid employee---------------");
 		
-		Employee employee = empService.findById(id);
+		Employee1 employee = empService.findById(id);
 		if(employee==null) {
 			System.out.println("employee not found");
 		}
@@ -63,7 +64,7 @@ public class EmployeeController {
 		
 		System.out.println("----------findbyname employee---------------");
 		
-		List<Employee> empList = empService.findByName(name);
+		List<Employee1> empList = empService.findByName(name);
 		
 		System.out.println(empList);
 	}
@@ -72,7 +73,7 @@ public class EmployeeController {
 
 		System.out.println("----------Adding employee---------------");
 		
-		Employee employee = new Employee();
+		Employee1 employee = new Employee1();
 		
 		employee.setName("alam");
 		Date dob = Date.valueOf("1987-05-11");
@@ -91,6 +92,5 @@ public class EmployeeController {
 		empService.create(employee);
 		
 	}
-	
-	
+
 }

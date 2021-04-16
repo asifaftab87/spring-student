@@ -1,4 +1,4 @@
-package org.la.student.asif.jdbc.repository;
+package org.la.student.tahir.jdbc.repository;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -10,44 +10,53 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.la.student.asif.jdbc.model.Employee;
+import org.la.student.tahir.jdbc.model.Employee1;
 
 public class EmployeeRepository {
-	
-	static Connection con = null;
 
+	static Connection con= null;
+	
 	public static void connectionOpen() {
+	
+	try {
 		
-		try {
-			//Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/student?serverTimezone=UTC","root","root");
-			if(con!=null) {
-				System.out.println("connection to mysql successful");
-			}
-			else
-				System.out.println("failed to connect to mysql");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?serverTimezone = UTC", "root", "root");
+		
+		if( con != null) {
+			System.out.println("Connection Successful");
 		}
-		catch(Exception e) {
-			System.out.println(e.getMessage());
+		
+		else {
+			System.out.println("FAiled to connect");
 		}
+		
+		
 	}
 	
-	public static List<Employee> findAll(){
+	catch(Exception e) {
+		
+		System.out.println(e.getMessage());
+	}
+	
+}
+	
+	public static List<Employee1> findAll(){
 		if(con==null) {
 			return null;
 		}
+		
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee");
+			rs = stmt.executeQuery("SELECT * FROM employee1");
 			while(rs.next()) {
 				
-				Employee emp = new Employee();
-				
+				Employee1 emp = new Employee1();
+			
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -83,8 +92,9 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
+
 	
-	public static Employee findById(int id){
+	public static Employee1 findById(int id){
 	
 		if(con==null) {
 			return null;
@@ -92,17 +102,17 @@ public class EmployeeRepository {
 		
 		ResultSet rs = null;
 		PreparedStatement pStatement = null;
-		Employee emp = null;
+		Employee1 emp = null;
 
 		try {
-			String query = "SELECT * FROM employee WHERE id=?";
+			String query = "SELECT * FROM employee1 WHERE id=?";
 			pStatement = con.prepareStatement(query);
 			pStatement.setLong(1, id);
 			
 			rs = pStatement.executeQuery();
 			
 			if(rs.next()) {
-				emp = new Employee();
+				emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -136,7 +146,7 @@ public class EmployeeRepository {
 		return emp;
 	}
 	
-	public static List<Employee> findByName(String name){
+	public static List<Employee1> findByName(String name){
 		
 		if(con==null) {
 			return null;
@@ -144,7 +154,7 @@ public class EmployeeRepository {
 		PreparedStatement pStatement = null;
 		ResultSet rs = null;
 		
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		
 		try {
 			String query = "SELECT * FROM employee1 WHERE name=?";
@@ -153,7 +163,7 @@ public class EmployeeRepository {
 			
 			rs = pStatement.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -187,23 +197,23 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByDob(Date fromDobDate, Date toDobDate){
+	public static List<Employee1> findByDob(Date fromDobDate, Date toDobDate){
 		
 		if(con==null) {
 			return null;
 		}
 		PreparedStatement pStatement = null;
 		ResultSet rs = null;
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE dob BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee1 WHERE dob BETWEEN ? AND ?";
 			pStatement = con.prepareStatement(query);
 			pStatement.setDate(1, fromDobDate);
 			pStatement.setDate(2, toDobDate);
 			
 			rs = pStatement.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -236,23 +246,23 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByJoinedDate(Date fromJoinedDate, Date toJoinedDate){
+	public static List<Employee1> findByJoinedDate(Date fromJoinedDate, Date toJoinedDate){
 		
 		if(con==null) {
 			return null;
 		}
 		PreparedStatement pStatement = null;
 		ResultSet rs = null;
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE joinedDate BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee1 WHERE joinedDate BETWEEN ? AND ?";
 			pStatement = con.prepareStatement(query);
 			pStatement.setDate(1, fromJoinedDate);
 			pStatement.setDate(2, toJoinedDate);
 			
 			rs = pStatement.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -285,23 +295,23 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByReleaseDate(Date fromReleaseDate, Date toReleaseDate){
+	public static List<Employee1> findByReleaseDate(Date fromReleaseDate, Date toReleaseDate){
 		
 		if(con==null) {
 			return null;
 		}
 		PreparedStatement pStmt = null;
 		ResultSet rs = null;
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE releaseDate BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee1 WHERE releaseDate BETWEEN ? AND ?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setDate(1, fromReleaseDate);
 			pStmt.setDate(2, toReleaseDate);
 			
 			rs = pStmt.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -334,17 +344,17 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static Employee findByEmailId(String emailId){
+	public static Employee1 findByEmailId(String emailId){
 		
 		if(con==null) {
 			return null;
 		}
 		ResultSet rs = null;
 		PreparedStatement pStmt = null;
-		Employee emp = new Employee();
+		Employee1 emp = new Employee1();
 
 		try {
-			String query = "SELECT * FROM employee WHERE emailId=?";
+			String query = "SELECT * FROM employee1 WHERE emailId=?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setString(1, emailId);
 			
@@ -383,7 +393,7 @@ public class EmployeeRepository {
 		return emp;
 	}
 	
-	public static List<Employee> findByNoticePeriod(int noticePeriod){
+	public static List<Employee1> findByNoticePeriod(int noticePeriod){
 		
 		if(con==null) {
 			return null;
@@ -391,16 +401,16 @@ public class EmployeeRepository {
 		PreparedStatement pStmt = null;
 		ResultSet rs = null;
 		
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		
 		try {
-			String query = "SELECT * FROM employee WHERE noticePeriod=?";
+			String query = "SELECT * FROM employee1 WHERE noticePeriod=?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setInt(1, noticePeriod);
 			
 			rs = pStmt.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -435,7 +445,7 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByGender(String gender){
+	public static List<Employee1> findByGender(String gender){
 		
 		if(con==null) {
 			return null;
@@ -443,16 +453,16 @@ public class EmployeeRepository {
 		PreparedStatement pStmt = null;
 		ResultSet rs = null;
 		
-		List<Employee> empList = new ArrayList<>();
+		List<Employee1> empList = new ArrayList<>();
 		
 		try {
-			String query = "SELECT * FROM employee WHERE gender=?";
+			String query = "SELECT * FROM employee1 WHERE gender=?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setString(1, gender);
 			
 			rs = pStmt.executeQuery();
 			while(rs.next()) {
-				Employee emp = new Employee();
+				Employee1 emp = new Employee1();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -486,13 +496,13 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	public static void create(Employee employee) {
+	public static void create(Employee1 employee) {
 		
 		PreparedStatement pStmt = null;
 		
 		try {
 			
-			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO employee1 VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 			
 			pStmt = con.prepareStatement(sql);
 			
@@ -538,7 +548,7 @@ public class EmployeeRepository {
 		Statement stmt = null;
 		try {
 			stmt = con.createStatement();
-			String query = "UPDATE employee SET name='Farhan' WHERE emailId='nabila80@mail.com'";
+			String query = "UPDATE employee1 SET name='Farhan' WHERE emailId='nabila80@mail.com'";
 			int executeUpdate = stmt.executeUpdate(query);
 
 			if (executeUpdate > 0) {
@@ -560,5 +570,6 @@ public class EmployeeRepository {
 			}
 		}
 	}
+	
 	
 }
