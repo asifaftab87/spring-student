@@ -1,4 +1,5 @@
-import java.awt.datatransfer.SystemFlavorMap;
+
+package org.la.student.bakil;
 
 public class Assignment2 {
 
