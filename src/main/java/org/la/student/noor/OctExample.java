@@ -1,10 +1,13 @@
-package org.la.student.asif;
+package org.la.student.noor;
 
-public class HexExample {
+public class OctExample {
 
 	public static void main(String[] args) {
 		
-		int i = 0xF;
+		int i=01100;
 		System.out.println("i: "+i);
+
+
 	}
+
 }

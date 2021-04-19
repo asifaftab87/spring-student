@@ -18,6 +18,13 @@ public class FirstClass {
 	   
 		
 		
+	   System.out.println("ABCDEF");
+	   
+	   int j = 4;
+	   j--;
+	   
+	   System.out.println(j);
+	   
 		
 		
 

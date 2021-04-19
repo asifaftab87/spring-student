@@ -1,10 +1,10 @@
 package org.la.student.asif;
 
-public class HexExample {
+public class Test {
 
 	public static void main(String[] args) {
-		
-		int i = 0xF;
-		System.out.println("i: "+i);
+
+		System.out.println("this is a test method");
 	}
+
 }
