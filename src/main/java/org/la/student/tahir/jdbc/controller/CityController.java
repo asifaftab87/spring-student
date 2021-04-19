@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import org.la.student.tahir.jdbc.model.City;
+//import org.la.student.tahir.jdbc.repository.CompanyRepository;
 import org.la.student.tahir.jdbc.service.CityService;
 
 public class CityController {
@@ -16,7 +17,7 @@ public class CityController {
 		
 		CityController citControl = new CityController();
 		
-		//citControl.addCity();
+		citControl.addCity();
 		//citControl.findById(1);
 		citControl.findByCity("Yerwa");
 		
@@ -36,7 +37,7 @@ public class CityController {
 			}
 		}
 		
-		void findByCity(String city) {
+	void findByCity(String city) {
 			
 			System.out.println("----------findbyCity city---------------");
 			

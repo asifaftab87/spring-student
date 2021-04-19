@@ -33,10 +33,7 @@ public class CityRepository {
 		}
 	}
 	
-	public static void main(String[] args) {
-		
-		connectionOpen();
-	}
+	
 	
 	public static List<City> findAll(){
 		if(con==null) {

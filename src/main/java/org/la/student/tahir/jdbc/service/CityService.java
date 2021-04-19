@@ -1,11 +1,9 @@
 package org.la.student.tahir.jdbc.service;
 
 
-import java.sql.Date;
+
 import java.util.List;
 
-import org.la.student.asif.jdbc.model.Employee;
-import org.la.student.asif.jdbc.repository.EmployeeRepository;
 import org.la.student.tahir.jdbc.model.City;
 import org.la.student.tahir.jdbc.repository.CityRepository;
 
@@ -40,6 +38,7 @@ public class CityService {
 	
 	public static void update() {
 		CityRepository.update();
+		
 		City city = new City();
 		city.getCity();
 		city.getId();
