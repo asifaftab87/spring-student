@@ -16,7 +16,7 @@ public class FactorialMethod {
 		int g=5;
 		int result = act(5);
 
-		System.out.println("Factor of " + g + " is " + result+" in act method ");
+		System.out.println("Factorial of " + g + " is " + result+" in act method ");
 		
 
 	}
