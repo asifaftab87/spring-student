@@ -8,14 +8,17 @@ public class Assignment2 {
 		int a= 1;
 	   System.out.println("a:"+ a);
 	 //wap to create and print a char variable?
-	  char c= 'z';
+	 
+	   char c= 'z';
 	   
 	   System.out.println("c:"+ c);
 	  
 	  //wap to create and print a float variable?
-	    float f= 2.5f;
+	   
+	   float f= 2.5f;
 	    System.out.println("f: "+ f);
-	    //wap to create and print a short variable?
+	    //wap to create and print a short variable? 
+	    
 	    short s=254;
 	    System.out.println("s:" + s);
 	    //wap to create and print a boolean variable?
