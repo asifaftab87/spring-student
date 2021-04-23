@@ -1,4 +1,4 @@
-package org.la.student.Md;
+package org.la.student.md;
 
 public class Multiply2Numbers {
 
