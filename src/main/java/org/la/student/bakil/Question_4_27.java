@@ -1,4 +1,4 @@
-package assignment3;
+package org.la.student.bakil;
 
 /*
  * short s = 10;

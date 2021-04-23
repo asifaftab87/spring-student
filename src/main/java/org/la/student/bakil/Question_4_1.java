@@ -1,4 +1,4 @@
-package assignment3;
+package org.la.student.bakil;
 
 /*
  * wap to add two numbers?

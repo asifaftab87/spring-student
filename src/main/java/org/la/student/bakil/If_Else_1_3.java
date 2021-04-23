@@ -1,5 +1,4 @@
-package assignment3;
-
+package org.la.student.bakil;
 /*
  * wap to find which number is greater among two numbers
  */

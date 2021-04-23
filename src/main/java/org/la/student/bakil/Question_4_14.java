@@ -1,4 +1,4 @@
-package assignment3;
+package org.la.student.bakil;
 
 /*
  * what will be output: double x = 14 / 5 ;

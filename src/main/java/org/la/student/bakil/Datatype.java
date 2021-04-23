@@ -1,5 +1,4 @@
-package assignment3;
-
+package org.la.student.bakil;
 
 /*
  what will be size, type and default value of these variables?

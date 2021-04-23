@@ -1,4 +1,5 @@
-package assignment3;
+package org.la.student.bakil;
+
 /*
  * wap to create a char variable but assign an int value and print that variable?
  */

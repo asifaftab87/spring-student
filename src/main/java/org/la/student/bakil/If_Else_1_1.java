@@ -1,5 +1,4 @@
-package assignment3;
-
+package org.la.student.bakil;
 /*
  * wap to find whi ch number is greater among three numbers
  */

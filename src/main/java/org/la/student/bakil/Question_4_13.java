@@ -1,4 +1,4 @@
-package assignment3;
+package org.la.student.bakil;
 
 /*
  * what will be output: int x = 5 + 3 * 4 / 5 + 4;

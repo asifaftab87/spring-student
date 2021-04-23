@@ -1,4 +1,4 @@
-package assignment3;
+package org.la.student.bakil;
 
 /*
  * int x = 42;

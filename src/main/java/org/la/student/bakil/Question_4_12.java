@@ -1,5 +1,4 @@
-package assignment3;
-
+package org.la.student.bakil;
 /*
  * wap to find average of 2 numbers?
  */
