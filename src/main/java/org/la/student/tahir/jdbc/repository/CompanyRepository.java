@@ -80,7 +80,83 @@ public class CompanyRepository {
 		return comlist;
 	}
 	
-	public static Company findById(int companyId){
+
+public static void create(Company company) {
+	
+	PreparedStatement pStmt = null;
+	
+	try {
+		
+		String sql = "INSERT INTO company VALUES(?,?,?,?)";
+		
+		pStmt = con.prepareStatement(sql);
+		
+	
+		
+		pStmt.setInt(1, (int)Math.random());
+		pStmt.setString(2, company.getName());
+		pStmt.setString(3, company.getDescription());
+		pStmt.setInt(4, company.getPrimaryContactAttendeeId());
+		
+		
+		int executeUpdate = pStmt.executeUpdate();
+		
+		if(executeUpdate > 0) {
+			System.out.println(executeUpdate + "data added successfully");
+		}
+		else {
+			System.out.println("failed to add data");
+		}
+	}
+		catch (SQLException se) {
+			se.printStackTrace();
+			System.out.println(se.getMessage());
+		} catch (Exception e) {
+			System.out.println(e);
+	}
+	finally {
+			try {
+				if (pStmt != null) {
+					pStmt.close();
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+	}
+}
+
+public static void update() {
+	Statement stmt = null;
+	try {
+		stmt = con.createStatement();
+		String query = "UPDATE company SET name='Farhan' WHERE company_Id= 1 ";
+		int executeUpdate = stmt.executeUpdate(query);
+
+		if (executeUpdate > 0) {
+			System.out.println(executeUpdate + " updating data successful");
+		} else {
+			System.out.println("failed to update data");
+		}
+	} catch (SQLException se) {
+		se.printStackTrace();
+	} catch (Exception e) {
+		System.out.println(e);
+	} finally {
+		try {
+			if (stmt != null) {
+				stmt.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+	
+}
+
+	
+/*	public static Company findById(int companyId){
 		
 		if(con==null) {
 			return null;
@@ -269,78 +345,5 @@ public static Company findByPrimaryContactAttendeeId(int primaryContactAttendeeI
 		}
 	}
 	return company;
-}
-
-public static void create(Company company) {
+}*/
 	
-	PreparedStatement pStmt = null;
-	
-	try {
-		
-		String sql = "INSERT INTO company VALUES(?,?,?,?)";
-		
-		pStmt = con.prepareStatement(sql);
-		
-	
-		
-		pStmt.setInt(1, (int)Math.random());
-		pStmt.setString(2, company.getName());
-		pStmt.setString(3, company.getDescription());
-		pStmt.setInt(4, company.getPrimaryContactAttendeeId());
-		
-		
-		int executeUpdate = pStmt.executeUpdate();
-		
-		if(executeUpdate > 0) {
-			System.out.println(executeUpdate + "data added successfully");
-		}
-		else {
-			System.out.println("failed to add data");
-		}
-	}
-		catch (SQLException se) {
-			se.printStackTrace();
-			System.out.println(se.getMessage());
-		} catch (Exception e) {
-			System.out.println(e);
-	}
-	finally {
-			try {
-				if (pStmt != null) {
-					pStmt.close();
-				}
-			}
-			catch (SQLException e) {
-				e.printStackTrace();
-			}
-	}
-}
-
-public static void update() {
-	Statement stmt = null;
-	try {
-		stmt = con.createStatement();
-		String query = "UPDATE company SET name='Farhan' WHERE company_Id= 1 ";
-		int executeUpdate = stmt.executeUpdate(query);
-
-		if (executeUpdate > 0) {
-			System.out.println(executeUpdate + " updating data successful");
-		} else {
-			System.out.println("failed to update data");
-		}
-	} catch (SQLException se) {
-		se.printStackTrace();
-	} catch (Exception e) {
-		System.out.println(e);
-	} finally {
-		try {
-			if (stmt != null) {
-				stmt.close();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-}
-	
-}

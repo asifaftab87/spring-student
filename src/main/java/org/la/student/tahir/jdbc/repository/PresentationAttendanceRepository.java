@@ -9,10 +9,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.la.student.tahir.jdbc.model.PresentationAttendance;
 
-import org.la.student.tahir.jdbc.model.City;
 
-public class CityRepository {
+public class PresentationAttendanceRepository {
+
+	
 
 
 	static Connection con = null;
@@ -33,29 +35,29 @@ public class CityRepository {
 		}
 	}
 	
-	
-	
-	public static List<City> findAll(){
+
+	public static List<PresentationAttendance> findAll(){
 		if(con==null) {
 			return null;
 		}
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		List<City> empList = new ArrayList<>();
+		List<PresentationAttendance> plist = new ArrayList<>();
 		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM city");
+			rs = stmt.executeQuery("SELECT * FROM presentation_attendance");
 			while(rs.next()) {
 				
-				City city = new City();
+				PresentationAttendance pt = new PresentationAttendance();
 				
-				city.setId(rs.getInt(1));
-				city.setCity(rs.getString(2));
+				pt.setPresentationId(rs.getInt(1));
+				pt.setTicketId(rs.getInt(2));
+				pt.setAttendeeId(rs.getInt(3));
 				
+				plist.add(pt);
 				
-				empList.add(city);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -75,11 +77,10 @@ public class CityRepository {
 				e.printStackTrace();
 			}
 		}
-		return empList;
+		return plist;
 	}
 	
-/*	
-	public static City findById(int id){
+public static PresentationAttendance findByTicketId(int ticketId){
 		
 		if(con==null) {
 			return null;
@@ -87,20 +88,21 @@ public class CityRepository {
 		
 		ResultSet rs = null;
 		PreparedStatement pStatement = null;
-		City city = null;
-
+		
+		PresentationAttendance pt = null;
 		try {
-			String query = "SELECT * FROM city WHERE id=?";
+			String query = "SELECT * FROM presentation_attendance WHERE ticke_id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setLong(1, id);
+			pStatement.setInt(1, ticketId);
 			
 			rs = pStatement.executeQuery();
 			
 			if(rs.next()) {
-				city = new City();
-				city.setId(rs.getInt(1));
-				city.setCity(rs.getString(2));
-				
+				pt = new PresentationAttendance();
+			
+				pt.setPresentationId(rs.getInt(1));
+				pt.setTicketId(rs.getInt(2));
+				pt.setAttendeeId(rs.getInt(3));
 			}
 		} 
 		catch (SQLException e) {
@@ -121,35 +123,81 @@ public class CityRepository {
 				e.printStackTrace();
 			}
 		}
-		return city;
+		return pt;
+	}
+
+	public static PresentationAttendance findByPresentationId(int presentationId){
+	
+	if(con==null) {
+		return null;
 	}
 	
-public static List<City> findByCity(String city){
+	ResultSet rs = null;
+	PreparedStatement pStatement = null;
+	
+	PresentationAttendance pt = null;
+	try {
+		String query = "SELECT * FROM presentation_attendance WHERE presentation_id=?";
+		pStatement = con.prepareStatement(query);
+		pStatement.setInt(1, presentationId);
+		
+		rs = pStatement.executeQuery();
+		
+		if(rs.next()) {
+			pt = new PresentationAttendance();
+		
+			pt.setPresentationId(rs.getInt(1));
+			pt.setTicketId(rs.getInt(2));
+			pt.setAttendeeId(rs.getInt(3));
+		}
+	} 
+	catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pStatement != null) {
+				pStatement.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return pt;
+}
+
+	public static PresentationAttendance findByAttendeeId(int attendeeId){
 		
 		if(con==null) {
 			return null;
 		}
-		PreparedStatement pStatement = null;
+		
 		ResultSet rs = null;
+		PreparedStatement pStatement = null;
 		
-		List<City> city1 = new ArrayList<>();
-		
+		PresentationAttendance pt = null;
 		try {
-			String query = "SELECT * FROM city WHERE city=?";
+			String query = "SELECT * FROM presentation_attendance WHERE attendee_id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setString(1, city);
+			pStatement.setInt(1, attendeeId);
 			
 			rs = pStatement.executeQuery();
-			while(rs.next()) {
-				
-				City cit = new City();
-				
-				cit.setId(rs.getInt(1));
-				cit.setCity(rs.getString(2));
-				
-				city1.add(cit);
+			
+			if(rs.next()) {
+				pt = new PresentationAttendance();
+			
+				pt.setPresentationId(rs.getInt(1));
+				pt.setTicketId(rs.getInt(2));
+				pt.setAttendeeId(rs.getInt(3));
 			}
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
@@ -167,21 +215,24 @@ public static List<City> findByCity(String city){
 				e.printStackTrace();
 			}
 		}
-		return city1;
-	}*/
+		return pt;
+	}
 
-public static void create(City city) {
+
+
+public static void create(PresentationAttendance pt) {
 	
 	PreparedStatement pStmt = null;
 	
 	try {
 		
-		String sql = "INSERT INTO city VALUES(?,?)";
+		String sql = "INSERT INTO presentation_attendance VALUES(?,?,?)";
 		
 		pStmt = con.prepareStatement(sql);
 		
 		pStmt.setInt(1, (int)Math.random());
-		pStmt.setString(2, city.getCity());
+		pStmt.setInt(2, pt.getPresentationId());
+		pStmt.setInt(3, pt.getAttendeeId());
 		
 		int executeUpdate = pStmt.executeUpdate();
 		
@@ -209,11 +260,12 @@ public static void create(City city) {
 	}
 }
 
+
 public static void update() {
 	Statement stmt = null;
 	try {
 		stmt = con.createStatement();
-		String query = "UPDATE city SET city='Yerwa' WHERE id=1";
+		String query = "UPDATE presentation_attendance SET attendee_id=10 WHERE ticket_id=1";
 		int executeUpdate = stmt.executeUpdate(query);
 
 		if (executeUpdate > 0) {
@@ -235,6 +287,5 @@ public static void update() {
 		}
 	}
 }
-	
-	
+
 }

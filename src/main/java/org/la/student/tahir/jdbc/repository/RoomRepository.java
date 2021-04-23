@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import org.la.student.tahir.jdbc.model.City;
+import org.la.student.tahir.jdbc.model.Room;
 
-public class CityRepository {
+public class RoomRepository {
 
 
 	static Connection con = null;
@@ -33,29 +33,30 @@ public class CityRepository {
 		}
 	}
 	
-	
-	
-	public static List<City> findAll(){
+
+	public static List<Room> findAll(){
 		if(con==null) {
 			return null;
 		}
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		List<City> empList = new ArrayList<>();
+		List<Room> roomlist = new ArrayList<>();
 		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM city");
+			rs = stmt.executeQuery("SELECT * FROM room");
 			while(rs.next()) {
 				
-				City city = new City();
+				Room room = new Room();
 				
-				city.setId(rs.getInt(1));
-				city.setCity(rs.getString(2));
+				//room = new Room();
+				room.setRoomId(rs.getInt(1));
+				room.setFloorNum(rs.getInt(2));
+				room.setSeatCapacity(rs.getInt(3));
 				
 				
-				empList.add(city);
+				roomlist.add(room);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -75,11 +76,10 @@ public class CityRepository {
 				e.printStackTrace();
 			}
 		}
-		return empList;
+		return roomlist;
 	}
 	
-/*	
-	public static City findById(int id){
+public static Room findByRoomId(int roomId){
 		
 		if(con==null) {
 			return null;
@@ -87,19 +87,20 @@ public class CityRepository {
 		
 		ResultSet rs = null;
 		PreparedStatement pStatement = null;
-		City city = null;
+		Room room = null;
 
 		try {
-			String query = "SELECT * FROM city WHERE id=?";
+			String query = "SELECT * FROM room WHERE room_id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setLong(1, id);
+			pStatement.setInt(1, roomId);
 			
 			rs = pStatement.executeQuery();
 			
 			if(rs.next()) {
-				city = new City();
-				city.setId(rs.getInt(1));
-				city.setCity(rs.getString(2));
+				room = new Room();
+				room.setRoomId(rs.getInt(1));
+				room.setFloorNum(rs.getInt(2));
+				room.setSeatCapacity(rs.getInt(3));
 				
 			}
 		} 
@@ -121,67 +122,117 @@ public class CityRepository {
 				e.printStackTrace();
 			}
 		}
-		return city;
+		return room;
 	}
+
+public static List<Room> findByfloorNum(int room){
 	
-public static List<City> findByCity(String city){
+	if(con==null) {
+		return null;
+	}
+	PreparedStatement pStatement = null;
+	ResultSet rs = null;
+	
+	List<Room> roomlist = new ArrayList<>();
+	
+	try {
+		String query = "SELECT * FROM room WHERE room_id=?";
+		pStatement = con.prepareStatement(query);
+		pStatement.setInt(1, room);
 		
-		if(con==null) {
-			return null;
-		}
-		PreparedStatement pStatement = null;
-		ResultSet rs = null;
-		
-		List<City> city1 = new ArrayList<>();
-		
-		try {
-			String query = "SELECT * FROM city WHERE city=?";
-			pStatement = con.prepareStatement(query);
-			pStatement.setString(1, city);
+		rs = pStatement.executeQuery();
+		while(rs.next()) {
 			
-			rs = pStatement.executeQuery();
-			while(rs.next()) {
-				
-				City cit = new City();
-				
-				cit.setId(rs.getInt(1));
-				cit.setCity(rs.getString(2));
-				
-				city1.add(cit);
+			Room rom = new Room();
+			rom.setRoomId(rs.getInt(1));
+			rom.setFloorNum(rs.getInt(2));
+			rom.setSeatCapacity(rs.getInt(3));
+			
+			roomlist.add(rom);
+			
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pStatement != null) {
+				pStatement.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if (pStatement != null) {
-					pStatement.close();
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
-		return city1;
-	}*/
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return roomlist;
+}
 
-public static void create(City city) {
+
+public static List<Room> findByseatCapacity(int room){
+	
+	if(con==null) {
+		return null;
+	}
+	PreparedStatement pStatement = null;
+	ResultSet rs = null;
+	
+	List<Room> roomlist = new ArrayList<>();
+	
+	try {
+		String query = "SELECT * FROM room WHERE seat_capacity=?";
+		pStatement = con.prepareStatement(query);
+		pStatement.setInt(1, room);
+		
+		rs = pStatement.executeQuery();
+		while(rs.next()) {
+			
+			Room rom = new Room();
+			rom.setRoomId(rs.getInt(1));
+			rom.setFloorNum(rs.getInt(2));
+			rom.setSeatCapacity(rs.getInt(3));
+			
+			roomlist.add(rom);
+			
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pStatement != null) {
+				pStatement.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return roomlist;
+}
+
+public static void create(Room room) {
 	
 	PreparedStatement pStmt = null;
 	
 	try {
 		
-		String sql = "INSERT INTO city VALUES(?,?)";
+		String sql = "INSERT INTO room VALUES(?,?,?)";
 		
 		pStmt = con.prepareStatement(sql);
 		
 		pStmt.setInt(1, (int)Math.random());
-		pStmt.setString(2, city.getCity());
+		pStmt.setInt(2, room.getFloorNum());
+		pStmt.setInt(3, room.getSeatCapacity());
 		
 		int executeUpdate = pStmt.executeUpdate();
 		
@@ -209,11 +260,12 @@ public static void create(City city) {
 	}
 }
 
+
 public static void update() {
 	Statement stmt = null;
 	try {
 		stmt = con.createStatement();
-		String query = "UPDATE city SET city='Yerwa' WHERE id=1";
+		String query = "UPDATE room SET seat_capacity=10 WHERE roomId=1";
 		int executeUpdate = stmt.executeUpdate(query);
 
 		if (executeUpdate > 0) {
@@ -235,6 +287,5 @@ public static void update() {
 		}
 	}
 }
-	
-	
+
 }

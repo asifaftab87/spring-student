@@ -1,7 +1,7 @@
 package org.la.student.tahir.jdbc.controller;
 
 
-import java.util.List;
+//import java.util.List;
 
 import org.la.student.tahir.jdbc.model.Company;
 
@@ -10,14 +10,19 @@ import org.la.student.tahir.jdbc.service.CompanyService;
 
 public class CompanyController {
 	
-	CompanyService comService = new CompanyService();
-	static Company company = new Company();
+	//CompanyService comService = new CompanyService();
+	//static Company company = new Company();
+CompanyService comService = null;
 	
+	public CompanyController() {
+		comService = new CompanyService();
+	}
 	
+/*	
 	public void findAll(){
 		List<Company> empList = comService.findAll();
 		empList.stream().forEach(s -> System.out.println(s));
-	}
+	}*/
 	
 	public static void main(String[] args) {
 		
@@ -29,7 +34,27 @@ public class CompanyController {
 		//comctrl.findById(11);
 	}
 	
+	void addCompany() {
+
+		//System.out.println("----------Adding company---------------");
+		
+		
+		
+		Company company = new Company();
+		
+		company.setCompanyId(1);
+		company.setName("GALAXY");
+		company.setDescription("Construction");
+		company.setPrimaryContactAttendeeId(234);
+			
+		
+		//comService.create(company);
+		comService.create(company);
+		
+		
+	}
 	
+/*	
 void findByName(String name) {
 		
 		System.out.println("----------findbyname employee---------------");
@@ -75,25 +100,7 @@ void findByPrimaryContactAttendeeId(int primaryContactAttendeeId) {
 		
 	}
 }
+*/
 
-void addCompany() {
-
-	//System.out.println("----------Adding company---------------");
-	
-	
-	
-	Company company = new Company();
-	
-	company.setCompanyId(1);
-	company.setName("GALAXY");
-	company.setDescription("Construction");
-	company.setPrimaryContactAttendeeId(234);
-		
-	
-	//comService.create(company);
-	comService.create(company);
-	
-	
-}
 }
 

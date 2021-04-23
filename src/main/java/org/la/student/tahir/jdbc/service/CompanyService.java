@@ -1,10 +1,10 @@
 package org.la.student.tahir.jdbc.service;
 
-import java.util.List;
+
 
 
 import org.la.student.tahir.jdbc.model.Company;
-import org.la.student.tahir.jdbc.repository.CityRepository;
+
 import org.la.student.tahir.jdbc.repository.CompanyRepository;
 
 public class CompanyService {
@@ -12,9 +12,9 @@ public class CompanyService {
 	
 public CompanyService() {
 		
-		CityRepository.connectionOpen();
+		CompanyRepository.connectionOpen();
 	}
-	
+/*	
 	public List<Company> findAll(){
 		List<Company> comList = CompanyRepository.findAll();
 		return comList;
@@ -40,7 +40,7 @@ public CompanyService() {
 		return CompanyRepository.findByPrimaryContactAttendeeId(primaryContactAttendeeId);
 		
 	}
-	
+	*/
 	
 	
 

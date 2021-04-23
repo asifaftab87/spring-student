@@ -1,7 +1,7 @@
 package org.la.student.tahir.jdbc.controller;
 
 
-import java.util.List;
+//import java.util.List;
 
 
 import org.la.student.tahir.jdbc.model.City;
@@ -19,12 +19,26 @@ public class CityController {
 		
 		citControl.addCity();
 		//citControl.findById(1);
-		citControl.findByCity("Yerwa");
+		//citControl.findByCity("Yerwa");
 		
 	}
+	
+	void addCity() {
+
+		System.out.println("----------Adding city---------------");
+		
+		City city = new City();
+		
+		city.setCity("Yerwa");
+		city.setId(2);
+		
+		citService.create(city);
+		
+	}
+	
 
 		
-	
+	/*
 	void findById(int id) {
 			System.out.println("----------findbyid city---------------");
 			
@@ -46,19 +60,7 @@ public class CityController {
 			System.out.println(cit);
 		}
 		
-
-		void addCity() {
-
-			System.out.println("----------Adding city---------------");
-			
-			City city = new City();
-			
-			city.setCity("Yerwa");
-			city.setId(2);
-			
-			citService.create(city);
-			
-		}
+*/
 		
 
 	

@@ -20,7 +20,7 @@ public class CityService {
 		return city1;
 	}
 	
-	public List<City> findByCity(String city){
+/*	public List<City> findByCity(String city){
 		List<City> city1 = CityRepository.findByCity(city);
 		return city1;
 	}
@@ -29,7 +29,7 @@ public class CityService {
 	public City findById(int id){
 		return CityRepository.findById(id);
 	}
-	
+	*/
 
 	public void create(City city) {
 		
