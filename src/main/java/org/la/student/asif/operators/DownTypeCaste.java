@@ -1,4 +1,4 @@
-2package org.la.student.asif.operators;
+package org.la.student.asif.operators;
 
 public class DownTypeCaste {
 
