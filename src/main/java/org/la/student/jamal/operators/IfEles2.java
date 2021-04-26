@@ -24,7 +24,7 @@ public class IfEles2 {
 			
 		}
 		
-		else  {
+		else   {
 			System.out.println("greater w  : " + w);
 		}
 			

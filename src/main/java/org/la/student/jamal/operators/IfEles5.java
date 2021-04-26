@@ -1,6 +1,6 @@
 package org.la.student.jamal.operators;
 
-public class IfEles3 {
+public class IfEles5 {
 	
 	/*
 	 * 3.	wap to find a number is odd or even
