@@ -6,14 +6,7 @@ public class Question5Arithmetic {
 	/*
 
 *  Arithmetic Operation
-*  1.	wap to add two numbers?
-	2.	wap to add three numbers?
-	3.	wap to subtract two numbers?
-	4.	wap to subtract three numbers?
-	5.	wap to multiply two numbers?
-	6.	wap to multiply three numbers?
-	7.	wap to find remainder of a given numbers?
-	8.	wap to find percentage?
+
 */       
 		  //	wap to add two numbers?
   int num1= 32, num2= 15, num3= 8, sum;
