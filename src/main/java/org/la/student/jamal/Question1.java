@@ -10,8 +10,7 @@ public class Question1 {
 		
 		int a = 60;
 		int b = 15;
-		int c= 10 ;
-		double d= 12.5;
+		
 		
 		
 		
