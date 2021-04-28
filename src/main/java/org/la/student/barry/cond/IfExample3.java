@@ -4,7 +4,7 @@ public class IfExample3 {
 
 	public static void main(String[] args) {
 		
-		char race = 'a';  //Asian
+		char race = 'b';  //Asian
 		char location= 'l';
 		System.out.println("Program started for checking race");
 		
