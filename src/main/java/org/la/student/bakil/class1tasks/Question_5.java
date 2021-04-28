@@ -1,4 +1,4 @@
-package org.la.student.bakil.class3tasks.class1tasks;
+package org.la.student.bakil.class1tasks;
 
 public class Question_5 {
 
