@@ -9,7 +9,7 @@ public class Question_12 {
 		
 	
 		int s = 'a';
-		System.out.println("S : "+s);
+		System.out.println("S : "+s);//
 		
 
 	}
