@@ -41,6 +41,7 @@ public class Assignment2 {
 	     System.out.println("e:" + e);
 	     int i= 19/5;
 	     System.out.println("i: " + i);
+	     
 	     int num1=35,num2=15,num3=10, sum;
 	    //3. wap to subtract two numbers?
 	    sum=num1-num2;
