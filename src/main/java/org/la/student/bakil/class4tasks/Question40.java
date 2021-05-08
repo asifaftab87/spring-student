@@ -6,14 +6,14 @@ public class Question40 {
 
 	public static void main(String[] args) {
 		
-		double x=1.2;
+		double x=001;
 		
-		if (x%1!=0) {
+		if (x>=10 && x<=99) {
 			System.out.println(" The number entered is double digit ");
 		}      
 		
 		else {
-			System.out.println("The number entered is integer digit");
+			System.out.println("The number entered is not double digit");
 		}
 }
 }
