@@ -1,4 +1,4 @@
-package org.la.student.md;
+package org.la.student.mdnawaz;
 
 public class BooleanVariable {
 
