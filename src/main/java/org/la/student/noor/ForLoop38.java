@@ -4,7 +4,7 @@ package org.la.student.noor;
 public class ForLoop38 {
 
 	public static void main(String[] args) {
-		int n=3;
+		int n=5;
 		int j;
 		for(j=1;j<=n;j++)
 		{
