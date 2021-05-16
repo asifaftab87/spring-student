@@ -1,10 +1,10 @@
 package org.la.student.bakil.class5tasks.for_loop;
-/*          *
-		   **
-	      ***
-	     ****
+/*         *
+		  * *
+		 * * *
+		* * * *
  */
-public class Question77 {
+public class Question78 {
 
 	public static void main(String[] args) 
 	
@@ -20,7 +20,7 @@ public class Question77 {
 	   
 		//print stars
 	for (int y=1;y<=i;y++) {
-		System.out.print("*");
+		System.out.print(" *");
 	}
 	
 	System.out.println("");
