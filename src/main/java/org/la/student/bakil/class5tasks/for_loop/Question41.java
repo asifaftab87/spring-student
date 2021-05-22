@@ -9,7 +9,7 @@ public class Question41 {
 	
 		
 		  int i,x=0,y=0;      
-		  int n=2;//it is the number to check
+		  int n=5;//it is the number to check
 		  x=n/2;  //=1    
 		  if(n==0||n==1){  
 		   System.out.println(n+" is not prime number");      
