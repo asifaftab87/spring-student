@@ -1,20 +1,19 @@
 package org.la.student.muhammad.abdullahi.ternary;
 
-public class loopQ40 {
+public class loopQ53 {
 	public static void main(String[] args) {
-		
-	int n= 1;
-		
-	for(int i=5;i>=1;i--) {
-	
-		n=n*i;
-		
 
-		}
-	System.out.println(n);
-	
-	
 		
+	int num =0;
+		for(int i=1;i<=10;i++) {
+			if(i%2!=0)
+				num+=i;
+			 
+			 
+				
+		}
+		
+		System.out.println(num);
 		
 		
 		
