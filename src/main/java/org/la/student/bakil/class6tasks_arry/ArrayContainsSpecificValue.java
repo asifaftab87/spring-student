@@ -13,9 +13,12 @@ public class ArrayContainsSpecificValue {
 		int sum = 0;
 	      
 		for(int i=0; i < a.length ; i++)
-	        sum = sum + a[i];
-	       //calculate average value
-	        int average = sum / a.length;
+	        
+			sum = sum + a[i];
+	       
+		//calculate average value
+	       
+		int average = sum / a.length;
 	        System.out.println("Average value of the array elements is : " + average); 
 	          
 	}
