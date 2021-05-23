@@ -7,7 +7,7 @@ public class CountOccurrencesArray {
 	public static void main(String[] args) {
 	
 		 int [] arr = {1, 2, 8, 3, 2, 2, 2, 5, 1};   
-	        //Array fr will store frequencies of element  
+	        //Array  will store frequencies of element  
 	        int [] x= new int [arr.length];  
 	        int visited = -1;  
 	        
