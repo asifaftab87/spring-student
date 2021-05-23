@@ -7,10 +7,15 @@ public class FindIndexOfAnArray {
 
 	public static void main(String[] args) {
 	
-		int a[] = { 10, 30, 12 };
-        int b[] = { 10, 30, 12 };
-  
-        
-        
+		int a[]= {1,2,3,4,5};
+		int value=0;
+		int index=1;
+		for(int i=0;i<a.length;i++) {
+			if(a[i]==value) {
+				index=i;
+				break;
+			}
+		}
+		System.out.println(index); 
     }
 }
