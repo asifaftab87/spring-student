@@ -6,7 +6,7 @@ public class PrintStarLeftToRightMethod {
 
 		for (int i = 0; i <= n; i++) {
 
-			for (int j = 1; j <= n - i; j++) {
+			for (int j = 1; j <= n - 1; j++) {
 				System.out.print("");
 			}
 			for (int k = 1; k < i; k++) {
@@ -30,9 +30,7 @@ public class PrintStarLeftToRightMethod {
 
 	static boolean star1(int n) {
 		System.out.println("Up to down decrese star ");
-
 		for (int i = 0; i <= n; i++) {
-
 			for (int j = 1; j <= n - i; j++) {
 				System.out.print("< ");
 			}
@@ -43,12 +41,9 @@ public class PrintStarLeftToRightMethod {
 		}
 		return true;
 	}
-
 	static boolean star2(int n) {
 		System.out.println("Daimond star ");
-
 		for (int i = 0; i <= n; i++) {
-
 			for (int j = 1; j <= n - i; j++) {
 				System.out.print(" ");
 			}

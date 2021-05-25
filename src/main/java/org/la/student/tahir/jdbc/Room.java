@@ -23,10 +23,11 @@ public class Room {
 				System.out.println("Connection successful");
 				
 			
-				room.read(con);
-				//room.create(con, 1, "A", 2);
+				
+				room.create(con, 1, "A", 2);
 				//room.update(con, 1, "B10", 20);
-				room.delete(con, 1);
+			//	room.delete(con, 1);
+				room.read(con);
 			
 				
 			} else {

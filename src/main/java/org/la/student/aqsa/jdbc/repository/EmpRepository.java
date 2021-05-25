@@ -1,5 +1,6 @@
-package org.la.student.asif.jdbc.repository;
+package org.la.student.aqsa.jdbc.repository;
 
+import java.util.List;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -8,19 +9,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
-import org.la.student.asif.jdbc.model.Employee;
+import org.la.student.aqsa.jdbc.model.Employee;
 
-public class EmployeeRepository {
-	
+public class EmpRepository {
 	static Connection con = null;
 
 	public static void connectionOpen() {
 		
 		try {
 			//Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/student?serverTimezone=UTC","root","root");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?serverTimezone=UTC","root","root");
 			if(con!=null) {
 				System.out.println("connection to mysql successful");
 			}
@@ -32,6 +31,7 @@ public class EmployeeRepository {
 		}
 	}
 	
+	
 	public static List<Employee> findAll(){
 		if(con==null) {
 			return null;
@@ -40,14 +40,11 @@ public class EmployeeRepository {
 		ResultSet rs = null;
 		
 		List<Employee> empList = new ArrayList<>();
-		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee");
+			rs = stmt.executeQuery("SELECT * FROM empolyee");
 			while(rs.next()) {
-				
 				Employee emp = new Employee();
-				
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -59,7 +56,6 @@ public class EmployeeRepository {
 				emp.setCreateDate(rs.getDate(9));
 				emp.setUpdateDate(rs.getDate(10));
 				emp.setAge(rs.getInt(11));
-				
 				empList.add(emp);
 			}
 		} catch (SQLException e) {
@@ -83,7 +79,6 @@ public class EmployeeRepository {
 		return empList;
 	}
 	
-	
 	public static Employee findById(int id){
 	
 		if(con==null) {
@@ -92,7 +87,7 @@ public class EmployeeRepository {
 		
 		ResultSet rs = null;
 		PreparedStatement pStatement = null;
-		Employee emp = null;
+		Employee emp = new Employee();
 
 		try {
 			String query = "SELECT * FROM employee WHERE id=?";
@@ -102,7 +97,6 @@ public class EmployeeRepository {
 			rs = pStatement.executeQuery();
 			
 			if(rs.next()) {
-				emp = new Employee();
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -147,7 +141,7 @@ public class EmployeeRepository {
 		List<Employee> empList = new ArrayList<>();
 		
 		try {
-			String query = "SELECT * FROM employee1 WHERE name=?";
+			String query = "SELECT * FROM employee WHERE name=?";
 			pStatement = con.prepareStatement(query);
 			pStatement.setString(1, name);
 			
@@ -294,7 +288,7 @@ public class EmployeeRepository {
 		ResultSet rs = null;
 		List<Employee> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE releaseDate BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee WHERE joinedDate BETWEEN ? AND ?";
 			pStmt = con.prepareStatement(query);
 			pStmt.setDate(1, fromReleaseDate);
 			pStmt.setDate(2, toReleaseDate);
@@ -487,16 +481,11 @@ public class EmployeeRepository {
 	}
 	
 	public static void create(Employee employee) {
-		
 		PreparedStatement pStmt = null;
-		
 		try {
-			
-			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)";
-			
+			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?)";
 			pStmt = con.prepareStatement(sql);
-			
-			pStmt.setInt(1, (int)Math.random());
+			pStmt.setInt(1, employee.getId());
 			pStmt.setString(2, employee.getName());
 			pStmt.setDate(3, employee.getDob());
 			pStmt.setString(4, employee.getEmailId());
@@ -506,10 +495,8 @@ public class EmployeeRepository {
 			pStmt.setInt(8, employee.getNoticePeriod());
 			pStmt.setDate(9, employee.getCreateDate());
 			pStmt.setDate(10, employee.getUpdateDate());
-			pStmt.setInt(11, employee.getAge());
 			
 			int executeUpdate = pStmt.executeUpdate();
-			
 			if(executeUpdate > 0) {
 				System.out.println(executeUpdate + "data added successfully");
 			}
@@ -560,5 +547,5 @@ public class EmployeeRepository {
 			}
 		}
 	}
-	
 }
+	

@@ -1,41 +1,31 @@
-package org.la.student.asif.jdbc.controller;
+package org.la.student.aqsa.jdbc.controller;
 
 import java.sql.Date;
 import java.util.List;
+import org.la.student.aqsa.jdbc.model.Employee;
+import org.la.student.aqsa.jdbc.service.EmpService;
 
-import org.la.student.asif.jdbc.model.Employee;
-import org.la.student.asif.jdbc.service.EmployeeService;
 
-public class EmployeeController {
+public class EmpController {
 
+	EmpService empService = null;
 	
-	EmployeeService empService = new EmployeeService ();
-
-	//EmployeeService empService = null;
-	
-	public EmployeeController() {
-		//empService = new EmployeeService();
-	}
-	
-	public void findAll(){
-		List<Employee> empList = empService.findAll();
-		empList.stream().forEach(s -> System.out.println(s));
+	public EmpController() {
+		empService = new EmpService();
 	}
 	
 	public static void main(String[] args) {
 		
-		EmployeeController empControl = new EmployeeController();
-		//empControl.addEmployee();
-		//empControl.findAll();
-		//empControl.addEmployee();
+		EmpController empControl = new EmpController();
+		empControl.addEmployee();
 		
 		//empControl.findById(1);
 		
-		empControl.findByName("asif");
+	//empControl.findByName("khan");
 		
-		//Date fromDate = Date.valueOf("1980-01-01");
-		//Date toDate = Date.valueOf("1997-12-30");
-		//empControl.findByAge(fromDate, toDate);
+	//	Date fromDate = Date.valueOf("1980-01-01");
+	//	Date toDate = Date.valueOf("1997-12-30");
+	//	empControl.findByAge(fromDate, toDate);
 		
 	}
 	
@@ -51,12 +41,7 @@ public class EmployeeController {
 		System.out.println("----------findbyid employee---------------");
 		
 		Employee employee = empService.findById(id);
-		if(employee==null) {
-			System.out.println("employee not found");
-		}
-		else {
-			System.out.println("Employee: "+employee);
-		}
+		System.out.println("Employee: "+employee);
 	}
 	
 	void findByName(String name) {
@@ -71,26 +56,21 @@ public class EmployeeController {
 	void addEmployee() {
 
 		System.out.println("----------Adding employee---------------");
-		
 		Employee employee = new Employee();
-		
-		employee.setName("alam");
-		Date dob = Date.valueOf("1987-05-11");
+		employee.setName("khan");
+		Date dob = Date.valueOf("1987-10-11");
 		employee.setDob(dob);
-		employee.setEmailId("alam@mail.com");
+		employee.setEmailId("fama@mail.com");
 		employee.setGender("male");
-		dob = Date.valueOf("2019-01-18");
+		dob = Date.valueOf("2016-1-28");
 		employee.setJoinedDate(dob);
-		dob = Date.valueOf("2011-07-28");
+		dob = Date.valueOf("2019-4-18");
 		employee.setReleaseDate(dob);
-		employee.setNoticePeriod(15);
+		employee.setNoticePeriod(45);
 		employee.setCreateDate(new Date(new java.util.Date().getTime()));
 		employee.setUpdateDate(new Date(new java.util.Date().getTime()));
-		employee.setAge(84);
 		
 		empService.create(employee);
 		
 	}
-	
-	
-}
+}	
