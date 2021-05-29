@@ -2,7 +2,7 @@ package org.la.student.bakil.class6tasks_arry;
 /*
  * Write a Java program to find the second largest element in an array?
  */
-public class SecondLargestElement {
+public class LargestAndSmallestElement {
 
 	public static void main(String[] args) {
 	
@@ -20,7 +20,12 @@ public class SecondLargestElement {
 	            }
 	         }
 	      }
-	      System.out.println("The second largest number is: "+a[size-1]);
-    }
+	      
+	      System.out.println("The largest number is  : "+a[size-1]);
+
+		  System.out.println("The Smallest number is : "+a[0]);
+		
+	
 	}
+}
 	

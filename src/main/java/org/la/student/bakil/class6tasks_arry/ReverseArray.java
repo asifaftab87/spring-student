@@ -2,7 +2,7 @@ package org.la.student.bakil.class6tasks_arry;
 /*
  * wap to print array in reverse order
  */
-public class Question10 {
+public class ReverseArray {
 
 	public static void main(String[] args) {
 	
@@ -19,6 +19,7 @@ public class Question10 {
 		    System.out.println("Original Array printed in reverse order:");
 		         for(int i=x.length-1;i>=0;i--)
 		         System.out.print(x[i] + "  ");
+		         
 		    }
 		}
 		
