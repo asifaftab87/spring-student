@@ -12,19 +12,10 @@ public class Boolean {
 		System.out.println(b2);
 		System.out.println(b3);
 		
-		
-		boolean c = true;
-		
-		System.out.println(c);
+	
 		
 		
-		boolean x=true;
-		boolean y=false;
-		boolean z=(x==y);
 		
-		System.out.println(x);
-		System.out.println(y);
-		System.out.println(z);
 		
 		
 

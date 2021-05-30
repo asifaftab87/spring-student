@@ -41,7 +41,7 @@ public class Double {
 		y = 4.5;
 		z = w+x+y;
 		
-		System.out.println("sum of w+x+y=z");
+		System.out.println("sum of w+x+y");
 		
 				
 		
