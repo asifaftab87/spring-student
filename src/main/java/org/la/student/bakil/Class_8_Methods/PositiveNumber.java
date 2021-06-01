@@ -9,26 +9,29 @@ public class PositiveNumber {
 	public static void main(String[] args) {
 		int arr []= {1, 3,8,12,33,-11};
 
-		array (arr);
+		print(arr);
 		
 
 	}
 
 		
-		static void array (int arr[]) {
-			for (int i=0;i<arr.length;i++) {
-				if (arr[i]>0) {
-				}
-				else {
-					System.out.println("The number is negative");
-				}
+		static int [] pos (int s[]) {
+			int t[]=new int [s.length];
+			for (int i=0;i<s.length;i++) {
+				if (s[i]<0) {
 				
 				}
-				for (int x :arr) {
-					System.out.println("The positive number is :"+x);
-			}
 			
+			}
+			return t;
+				}
+	
+		static void print (int arr[]) {
+			for (int a:arr) {
+				System.out.println(a+" ");
+			}
 		}
-	}
+		}
+	
 
 

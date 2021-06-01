@@ -4,7 +4,7 @@ public class OrOperator {
 
 	public static void main(String[] args) {
 		
-		char c ;
+		char c = 0 ;
 		
 		
 		if ((c>='a' && c<='z') || 
