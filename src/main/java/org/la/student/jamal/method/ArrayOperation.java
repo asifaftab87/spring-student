@@ -56,6 +56,11 @@ public class ArrayOperation {
 		int arr[]= {12,3,45,6,67,34};
 		smallest (arr);
 		
+		System.out.println("\n this is the addCopyArrays : ");
+		int x[]= {1,2,3,4,5,6};
+		int y[]=x;
+		addCopyArrays(x,y);
+		
 		
 		
 
@@ -159,6 +164,12 @@ public class ArrayOperation {
 		return size;
 	
 	
+	}
+	static int[] addCopyArrays(int x[] , int y[]) {
+		for (int i=0;i<x.length;i++) {
+			System.out.print(y[i]+ " ");
+		}
+		return x;
 	}
 
 
