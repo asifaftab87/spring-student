@@ -3,7 +3,7 @@ package org.la.student.bakil.Class_8_Methods;
  * void printOdd(int[])
 		method will print all odd number from supplied array
  */
-public class SumNumber_Method {
+public class AddTwoNumbers_Method {
 
 
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package org.la.student.bakil.class6tasks_arry;
 /*
  * wap to find greatest number from any array 
  */
-public class Question14 {
+public class LargsetElementOfArray {
 
 	public static void main(String[] args) {
 	
