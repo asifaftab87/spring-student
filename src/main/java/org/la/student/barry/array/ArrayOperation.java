@@ -1,4 +1,4 @@
-package org.la.student.barry.clas;
+package org.la.student.barry.array;
 
 public class ArrayOperation {
          public int[] copy(int [] src) {
