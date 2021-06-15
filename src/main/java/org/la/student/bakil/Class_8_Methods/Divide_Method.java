@@ -11,6 +11,7 @@ public class Divide_Method {
 		System.out.println(result);
 		
 	}
+	
 
 	
 	 static double div(int a, int b)  {
