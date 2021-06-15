@@ -10,7 +10,7 @@ public class loopQ35 {
 	
 		for(char a='a';a<='z';a++) {
 			
-			if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u')continue;	
+			if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u')	
 			System.out.println(a);
 			
 		}

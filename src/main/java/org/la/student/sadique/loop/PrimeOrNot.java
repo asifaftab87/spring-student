@@ -4,8 +4,8 @@ package org.la.student.sadique.loop;
 public class PrimeOrNot {
 
 	public static void main(String[] args) {
-		int a = 33;
-		int b = 2;
+		int a = 3;
+		int b = 4;
 		while (b < a) {
 			if (a % b == 0) {
 				break;

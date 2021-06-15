@@ -10,22 +10,12 @@ public class Comparisn {
 		
 		System.out.println("b: "+b);
 		
-		int d = 5, e =4;
-		
-		boolean f= d>e;
-		
-		System.out.println("f: "+f);
+	
 		
 		
-		int m =5, n=5;
 		
-		boolean o =m==n;
 		
-		System.out.println(o);
 		
-		int j =5, g=5;
-		
-		boolean z= j !=g;
 		
 
 	}

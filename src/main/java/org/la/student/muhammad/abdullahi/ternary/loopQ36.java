@@ -9,7 +9,7 @@ public class loopQ36 {
 	
 		
 		for(char a='A';a<='Z';a++) {
-		if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U')continue;	
+		if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U')	
 			System.out.println(a);
 			
 		}

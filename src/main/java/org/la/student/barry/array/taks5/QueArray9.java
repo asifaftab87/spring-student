@@ -9,10 +9,11 @@ public class QueArray9 {
 		
 		System.out.print("List of Numbers not divisible in  Array : ");
 		for(;i < div_arr.length;i++) 
-		{
+		  {
 			if(div_arr[i]%3!= 0) {
 				System.out.println(div_arr[i]);
 			}
 			
-		}    }
+		 } 
+     }
  }
