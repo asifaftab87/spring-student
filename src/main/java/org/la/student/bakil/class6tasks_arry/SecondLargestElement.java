@@ -20,7 +20,7 @@ public class SecondLargestElement {
 	            }
 	         }
 	      }
-	      System.out.println("The second largest number is:: "+a[size-2]);
+	      System.out.println("The second largest number is: "+a[size-1]);
     }
 	}
 	

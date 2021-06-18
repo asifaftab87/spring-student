@@ -10,7 +10,7 @@ public class Question9 {
 			
 		for (int i=0;i<a.length;i++) {
 				if (a[i]%2!=0) {
-			System.err.println("The number is not divisible by w : "+a[i]);
+			System.err.println("The number is not divisible by 2 : "+a[i]);
 		
 				}
 			}
