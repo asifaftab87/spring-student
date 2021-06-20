@@ -9,7 +9,7 @@ public class Question2 {
 		int a [] = {2,33,12,14};
 	
 		for (int i=0;i<a.length;i++) {
-			System.err.println(a[i]);
+			System.out.println(a[i]);
 		}
 	
 	}
