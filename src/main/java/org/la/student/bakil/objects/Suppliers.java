@@ -87,6 +87,7 @@ public class Suppliers {
 	}
 	
 	
+	
 	public String getPostalcode() {
 		return postalcode;
 	}
