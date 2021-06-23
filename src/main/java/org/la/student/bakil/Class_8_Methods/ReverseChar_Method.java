@@ -15,9 +15,9 @@ public class ReverseChar_Method {
 	
 	static char [] reverse(char [] letters) {
 		
-		int i = letters.length - 1, j = 0;
+		int j = 0;
 		char[] scr = new char[letters.length];
-		for(;  i >= 0;i--,j++){
+		for(int i = letters.length - 1;  i >= 0;i--,j++){
 		     scr[j] = letters[i];
 		}
 		for (char c : scr){
