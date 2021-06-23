@@ -5,7 +5,7 @@ public class Q31checkChar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		char c='1';
+		char c='A';
 		System.out.println(checkChar(c));
 	}
 
