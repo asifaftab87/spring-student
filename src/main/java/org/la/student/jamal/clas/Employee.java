@@ -49,6 +49,7 @@ public class Employee {
 		employeeNum=en;
 	}
 	
+	
 	public void setDateHired(String dh) {
 		dateHired=dh;
 	}
