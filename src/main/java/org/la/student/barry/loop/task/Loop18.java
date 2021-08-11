@@ -7,6 +7,8 @@ public class Loop18 {
 	 int i= 30;
 	 for(; i<=50; i++) { 
 		 if(i%7==0) {
+			 
+			 System.out.println("Hello Loop Class");
 		
 		 System.out.println("number divisible by 7: "+i);
      }
