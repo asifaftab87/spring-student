@@ -7,8 +7,9 @@ public class Tab {
 
 	public void displaySize() {
 		System.out.println("5 inches screen size");
+		System.out.println("5 inches screen size");
+		
 	}
-
 	
 	
 }
